@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <title>outandopen</title>
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+  <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+  <link id="theme" href="themes/libnotify.css" rel="stylesheet">
+  <script src="humane.min.js">
+  <script src="outandopen.js">
+  </script>
+
+
+
+</head>
+
+<body>
+
+
+
+<div data-role="page" id="home">
+
+	<div data-role="header">
+		<h1>outandopen</h1>
+	</div><!-- /header -->
+	
+	<a href="javascript:humane.error('Welcome Back')">test</a>
+	<div data-role="content">	
+	
+	</div>
+	
+		<a href="#friends" data-role="button" data-theme="b" >Friends</a>
+		<a href="#tours" data-role="button" data-theme="b" >Tours</a>
+		<a href="#mountains" data-role="button" data-theme="b" >Mountains</a>
+		<a href="javascript:load_data()" data-role="button" data-theme="c" >Load Data</a>
+		<a href="javascript:humane.error('Welcome Back')" data-role="button" data-theme="c" >Load Data</a>
+</div>
+
+<div data-role="page" id="friends">
+	<div data-role="header">
+		<h1>Friends</h1>
+	</div>
+
+	<div data-role="content">	
+		<p>Hello world</p>		
+	</div>
+
+	<a href="#home" data-role="button" data-theme="b" >Home</a>
+
+</div>
+
+<div data-role="page" id="tours">
+	<div data-role="header">
+		<h1>Tours</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+		<p>Hello world</p>		
+	</div>
+
+	<a href="#home" data-role="button" data-theme="b" >Home</a>
+
+</div>
+
+<div data-role="page" id="mountains">
+	<div data-role="header">
+		<h1>Mountains</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+		<p>Hello world</p>		
+	</div>
+
+	<a href="#home" data-role="button" data-theme="b" >Home</a>
+</div>
+
+<div data-role="page" id="load_data">
+	<div data-role="header">
+		<h1>Load Data</h1>
+	</div><!-- /header -->
+
+	<a href="#home" data-role="button" data-theme="b" >Home</a>
+</div>
+
+John Doe
+
+
+  </div>
+
+</body>
+</html>

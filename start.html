@@ -22,65 +22,140 @@
 <div data-role="page" id="home">
 
 	<div data-role="header">
-		<h1>outandopen</h1>
+		<h1>Out and Open</h1>
+<!--
+		<a href="#profile" data-icon="gear" class="ui-btn-left">Profile</a>
+-->
+		<a class="ui-btn-right" data-transition="pop" data-iconpos="notext" data-rel="dialog" data-icon="info" href="#info" title="Info" data-theme="a"></a>
 	</div><!-- /header -->
 	
-	<a href="javascript:humane.error('Welcome Back')">test</a>
 	<div data-role="content">	
 	
 	</div>
-	
 		<a href="#friends" data-role="button" data-theme="b" >Friends</a>
 		<a href="#tours" data-role="button" data-theme="b" >Tours</a>
 		<a href="#mountains" data-role="button" data-theme="b" >Mountains</a>
+		<a href="#lodges" data-role="button" data-theme="b" >Lodges</a>
+		<a href="#profile" data-role="button" data-icon="gear" data-theme="b" >Profile</a>
+		<a href="#calender" data-role="button" data-theme="b" >Calender</a>
 		<a href="javascript:load_data()" data-role="button" data-theme="c" >Load Data</a>
 		<a href="javascript:humane.error('Welcome Back')" data-role="button" data-theme="c" >Load Data</a>
 </div>
 
-<div data-role="page" id="friends">
+
+<div  data-role="page" id="info">
 	<div data-role="header">
-		<h1>Friends</h1>
+		<h1>Info</h1>
 	</div>
 
 	<div data-role="content">	
 		<p>Hello world</p>		
 	</div>
 
-	<a href="#home" data-role="button" data-theme="b" >Home</a>
+
+</div>
+
+
+<div data-role="page" id="friends">
+	<div data-role="header">
+		<h1>Friends</h1>
+		<a class="ui-btn-left" data-iconpos="notext" data-icon="home" href="#home" title="Home" data-theme="a"></a>
+	</div>
+
+	<div data-role="content">	
+		<p>Hello world</p>		
+	</div>
+
 
 </div>
 
 <div data-role="page" id="tours">
 	<div data-role="header">
 		<h1>Tours</h1>
+		<a class="ui-btn-left" data-iconpos="notext" data-icon="home" href="#home" title="Home" data-theme="a"></a>
 	</div><!-- /header -->
 
 	<div data-role="content">	
 		<p>Hello world</p>		
 	</div>
-
-	<a href="#home" data-role="button" data-theme="b" >Home</a>
 
 </div>
 
 <div data-role="page" id="mountains">
 	<div data-role="header">
 		<h1>Mountains</h1>
+		<a class="ui-btn-left" data-iconpos="notext" data-icon="home" href="#home" title="Home" data-theme="a"></a>
 	</div><!-- /header -->
 
 	<div data-role="content">	
 		<p>Hello world</p>		
 	</div>
 
-	<a href="#home" data-role="button" data-theme="b" >Home</a>
+</div>
+
+<div data-role="page" id="Lodges">
+	<div data-role="header">
+		<h1>Lodges</h1>
+		<a class="ui-btn-left" data-iconpos="notext" data-icon="home" href="#home" title="Home" data-theme="a"></a>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+		<p>Hello world</p>		
+	</div>
+
+</div>
+
+<div data-role="page" id="profile">
+	<div data-role="header">
+		<h1>Your Profile</h1>
+		<a class="ui-btn-left" data-iconpos="notext" data-icon="home" href="#home" title="Home" data-theme="a"></a>
+	</div><!-- /header -->
+	<label for="flip-a">edit</label>
+	<select name="slider" id="flip-b"data-role="slider">
+		<option value="off">logged</option>
+		<option value="on">edit</option>
+	</select> 
+
+	
+	
+	<div class="ui-grid-a">
+		<div class="ui-block-a" style="width:20"><a class="ui-btn-left" href="#info" data-role="button" data-icon="info" data-theme="c" >Fittness</a></div>
+		<div class="ui-block-b"><input type="range" name="slider" id="slider" value="0" min="0" max="10"/></div>
+	</div>
+	
+	<div data-role="fieldcontain">
+		<a class="ui-btn-left" href="#info" data-role="button" data-icon="info" data-theme="a" data-inline="true" >Alpine Experience</a>
+		<input type="range" name="slider" id="slider" value="0" min="0" max="10"  />
+	</div>
+	<div data-role="fieldcontain">
+		<a class="ui-btn-left" href="#info" data-role="button" data-icon="info" data-theme="a" data-inline="true" >Comfort with Hights</a>
+		<input type="range" name="slider" id="slider" value="0" min="0" max="10"  />
+	</div>
+
+	<div data-role="content">	
+		<p>Hello world</p>		
+	</div>
+
+</div>
+
+<div data-role="page" id="calender">
+	<div data-role="header">
+		<h1>Calender</h1>
+		<a class="ui-btn-left" data-iconpos="notext" data-icon="home" href="#home" title="Home" data-theme="a"></a>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+		<p>Hello world</p>		
+	</div>
+
 </div>
 
 <div data-role="page" id="load_data">
 	<div data-role="header">
 		<h1>Load Data</h1>
+		<a class="ui-btn-left" data-iconpos="notext" data-icon="home" href="#home" title="Home" data-theme="a"></a>
 	</div><!-- /header -->
 
-	<a href="#home" data-role="button" data-theme="b" >Home</a>
 </div>
 
 John Doe

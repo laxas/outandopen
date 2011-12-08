@@ -26,17 +26,19 @@
 <!--
 		<a href="#profile" data-icon="gear" class="ui-btn-left">Profile</a>
 -->
-		<a class="ui-btn-right" data-transition="pop" data-iconpos="notext" data-rel="dialog" data-icon="info" href="#info" title="Info" data-theme="a"></a>
+		<a class="ui-btn-right" data-transition="pop" data-iconpos="notext"
+           data-rel="dialog" data-icon="info" href="#info" title="Info"
+           data-theme="a"></a>
 	</div><!-- /header -->
-	
-	<div data-role="content">	
-	
+
+	<div data-role="content">
+
 	</div>
-		<a href="#friends" data-role="button" data-theme="b" >Friends</a>
+		<a href="#profile" data-role="button" data-icon="gear" data-theme="b" >Profile</a>
+        <a href="#friends" data-role="button" data-theme="b" >Friends</a>
 		<a href="#tours" data-role="button" data-theme="b" >Tours</a>
 		<a href="#mountains" data-role="button" data-theme="b" >Mountains</a>
 		<a href="#lodges" data-role="button" data-theme="b" >Lodges</a>
-		<a href="#profile" data-role="button" data-icon="gear" data-theme="b" >Profile</a>
 		<a href="#calender" data-role="button" data-theme="b" >Calender</a>
 		<a href="javascript:load_data()" data-role="button" data-theme="c" >Load Data</a>
 		<a href="javascript:humane.error('Welcome Back')" data-role="button" data-theme="c" >Load Data</a>
@@ -45,25 +47,85 @@
 
 <div  data-role="page" id="info">
 	<div data-role="header">
-		<h1>Info</h1>
+		<h1>Infos about outandopen</h1>
 	</div>
 
-	<div data-role="content">	
-		<p>Hello world</p>		
+	<div data-role="content">
+		<p><em>Out and Open</em> is an app that aimes to help with your outdoor tours.
+        At the early state the app is still in its functionality is mostly
+        helping to plan mountain hiking tours on food. And even in that area
+        the help the app can give you is rather limited. However, lets see how
+        this app evolves. Flow @ountandopen on twitter for updates.</p>
+        <p>A few words on navigation: whenever you see the <em>i</em> on a
+        button or in a header you get backround information. The "home" sign
+        in the headers brings you to the front page.</p>
 	</div>
 
 
+</div>
+
+<div  data-role="page" id="info_profile">
+	<div data-role="header">
+		<h1>Profile</h1>
+	</div>
+	<div data-role="content">
+		<p>To fillout your profile will help to find mountain tours for you,
+        which you might enjoy. You can share your profile with your friends
+        or make it public but you don't need to.</p>
+		<p>In the future there may be sophisticated ways to figure out how fit
+        and experienced you are. Up to now you have to rate yourselfe.</p>
+	</div>
+</div>
+
+<div  data-role="page" id="info_fitness">
+	<div data-role="header">
+		<h1>Physical Fitness</h1>
+	</div>
+	<div data-role="content">
+		<p>Rate your physical fitness on a scale from 0 ("I am almost dead")
+        to 10 ("I could start an himalaya expedition right now.").</p>
+        <p>As a roule of thumb you could devide the maximum altitude differenc
+        you walked on a singel day by 300 (e.g tour starting at 500m reaching
+        the peak at 1700m gives you a rating of 4).</p>
+	</div>
+</div>
+
+<div  data-role="page" id="info_experience">
+	<div data-role="header">
+		<h1>climbing experience</h1>
+	</div>
+	<div data-role="content">
+		<p>Rate how experienced your are with mountains on a scale from 0
+        ("I have never seen one") to 10 ("I did the seven summits and some
+        big walls."). If you have no clue what the "seven summits" are, you
+        are probably closer to 0 then to 10 ;-).</p>
+	</div>
+</div>
+
+<div  data-role="page" id="info_hight">
+	<div data-role="header">
+		<h1>Fitness</h1>
+	</div>
+	<div data-role="content">
+		<p>Rate how compftable you are when it comes to hights. 0 means you
+        freak out when you think of a mountain; 10 if you could walk on a
+        slagline 500m abouve the ground without the slightest arousal.").</p>
+	</div>
 </div>
 
 
 <div data-role="page" id="friends">
 	<div data-role="header">
 		<h1>Friends</h1>
-		<a class="ui-btn-left" data-iconpos="notext" data-icon="home" href="#home" title="Home" data-theme="a"></a>
-	</div>
+		<a class="ui-btn-left" data-iconpos="notext" data-icon="home"
+           href="#home" title="Home" data-theme="a"></a>
+        <a class="ui-btn-right" data-transition="pop" data-iconpos="notext"
+           data-rel="dialog" data-icon="info" href="#info" title="Info"
+           data-theme="a"></a>
+    </div>
 
-	<div data-role="content">	
-		<p>Hello world</p>		
+	<div data-role="content">
+		<p>Hello world</p>
 	</div>
 
 
@@ -72,11 +134,15 @@
 <div data-role="page" id="tours">
 	<div data-role="header">
 		<h1>Tours</h1>
-		<a class="ui-btn-left" data-iconpos="notext" data-icon="home" href="#home" title="Home" data-theme="a"></a>
+		<a class="ui-btn-left" data-iconpos="notext" data-icon="home"
+           href="#home" title="Home" data-theme="a"></a>
+        <a class="ui-btn-right" data-transition="pop" data-iconpos="notext"
+           data-rel="dialog" data-icon="info" href="#info" title="Info"
+           data-theme="a"></a>
 	</div><!-- /header -->
 
-	<div data-role="content">	
-		<p>Hello world</p>		
+	<div data-role="content">
+		<p>Hello world</p>
 	</div>
 
 </div>
@@ -84,56 +150,72 @@
 <div data-role="page" id="mountains">
 	<div data-role="header">
 		<h1>Mountains</h1>
-		<a class="ui-btn-left" data-iconpos="notext" data-icon="home" href="#home" title="Home" data-theme="a"></a>
+		<a class="ui-btn-left" data-iconpos="notext" data-icon="home"
+           href="#home" title="Home" data-theme="a"></a>
+        <a class="ui-btn-right" data-transition="pop" data-iconpos="notext"
+           data-rel="dialog" data-icon="info" href="#info" title="Info"
+           data-theme="a"></a>
 	</div><!-- /header -->
 
-	<div data-role="content">	
-		<p>Hello world</p>		
+	<div data-role="content">
+		<p>Hello world</p>
 	</div>
 
 </div>
 
-<div data-role="page" id="Lodges">
+<div data-role="page" id="lodges">
 	<div data-role="header">
 		<h1>Lodges</h1>
-		<a class="ui-btn-left" data-iconpos="notext" data-icon="home" href="#home" title="Home" data-theme="a"></a>
+		<a class="ui-btn-left" data-iconpos="notext" data-icon="home"
+           href="#home" title="Home" data-theme="a"></a>
+        <a class="ui-btn-right" data-transition="pop" data-iconpos="notext"
+           data-rel="dialog" data-icon="info" href="#info" title="Info"
+           data-theme="a"></a>
 	</div><!-- /header -->
 
-	<div data-role="content">	
-		<p>Hello world</p>		
+	<div data-role="content">
+		<p>Hello world</p>
 	</div>
 
 </div>
+
+
 
 <div data-role="page" id="profile">
 	<div data-role="header">
 		<h1>Your Profile</h1>
-		<a class="ui-btn-left" data-iconpos="notext" data-icon="home" href="#home" title="Home" data-theme="a"></a>
+		<a class="ui-btn-right" data-transition="pop" data-iconpos="notext"
+           data-rel="dialog" data-icon="info" href="#info_profile" title="Info"
+           data-theme="a"></a>
+		<a class="ui-btn-left" data-iconpos="notext" data-icon="home"
+           href="#home" title="Home" data-theme="a"></a>
 	</div><!-- /header -->
-	<label for="flip-a">edit</label>
+
 	<select name="slider" id="flip-b"data-role="slider">
-		<option value="off">logged</option>
+		<option value="off">fixed</option>
 		<option value="on">edit</option>
-	</select> 
+	</select>
 
-	
-	
-	<div class="ui-grid-a">
-		<div class="ui-block-a" style="width:20"><a class="ui-btn-left" href="#info" data-role="button" data-icon="info" data-theme="c" >Fittness</a></div>
-		<div class="ui-block-b"><input type="range" name="slider" id="slider" value="0" min="0" max="10"/></div>
-	</div>
-	
-	<div data-role="fieldcontain">
-		<a class="ui-btn-left" href="#info" data-role="button" data-icon="info" data-theme="a" data-inline="true" >Alpine Experience</a>
-		<input type="range" name="slider" id="slider" value="0" min="0" max="10"  />
-	</div>
-	<div data-role="fieldcontain">
-		<a class="ui-btn-left" href="#info" data-role="button" data-icon="info" data-theme="a" data-inline="true" >Comfort with Hights</a>
-		<input type="range" name="slider" id="slider" value="0" min="0" max="10"  />
-	</div>
+	<div data-role="content">
 
-	<div data-role="content">	
-		<p>Hello world</p>		
+        <div data-role="fieldcontain" class="ui-grid-a">
+            <a class="ui-btn-left" data-rel="dialog" data-transition="pop"
+               href="#info_fitness" data-role="button" data-icon="info"
+               data-theme="c" data-inline="true">Physical Fitness</a>
+            <input type="range" name="fitness" id="slider" value="0" min="0" max="10"/>
+        </div>
+
+        <div data-role="fieldcontain">
+            <a class="ui-btn-left" data-rel="dialog" data-transition="pop" href="#info_experience" data-role="button" data-icon="info" data-theme="c" data-inline="true" >Cimbing Experience</a>
+            <input type="range" name="experience" id="slider" value="0" min="0" max="10"  />
+        </div>
+
+        <div data-role="fieldcontain">
+            <a class="ui-btn-left" data-rel="dialog" data-transition="pop" href="#info_hight" data-role="button" data-icon="info" data-theme="c" data-inline="true" >Comfort with Hights</a>
+            <input type="range" name="hight" id="slider" value="0" min="0" max="10"  />
+        </div>
+
+
 	</div>
 
 </div>
@@ -144,8 +226,8 @@
 		<a class="ui-btn-left" data-iconpos="notext" data-icon="home" href="#home" title="Home" data-theme="a"></a>
 	</div><!-- /header -->
 
-	<div data-role="content">	
-		<p>Hello world</p>		
+	<div data-role="content">
+		<p>Hello world</p>
 	</div>
 
 </div>

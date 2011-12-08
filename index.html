@@ -14,7 +14,7 @@
 	  name,
 	  'width=' + w + ', height=' + h + ', ' +
 	  'location=no, menubar=no, ' +
-	  'status=no, toolbar=no, scrollbars=no, resizable=no');
+	  'status=no, toolbar=no, scrollbars=yes, resizable=no');
 	 win.resizeTo(w, h);
 	 win.focus();
 	}
@@ -30,9 +30,16 @@
 </head>
 
 <body>
+    <h1>Previews</h1>
+    <h2>if you are on a desctop</h2>
       <p><a href="start.html" target="popup"
- onClick="wopen('start.html', 'popup', 320, 480); return false;">Preview in a browser</a></p>
-      <p><a href="start.html" target="_blank">Preview on a real smartphone</a></p>
+            onClick="wopen('start.html', 'popup', 320, 480); return false;">320x480</a></p>
+      <p><a href="start.html" target="popup"
+            onClick="wopen('start.html', 'popup', 240, 320); return false;">240x320</a></p>
+    <h2>if you are on a smartphone</h2>
+      <p><a href="start.html" target="_blank">Resolution of your smartphone</a></p>
+
+
 </body>
 </html>
 

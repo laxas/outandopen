@@ -1,5 +1,6 @@
 import os
 import codecs
+import json
 #~ from lxml import etree
 import lxml.html
 
@@ -24,11 +25,14 @@ for cell in rows[:8]:
     text = text.strip()
     print text
 
-f = codecs.open("out.html","w", encoding="utf-8")
+#~ f = codecs.open("out.html","w", encoding="utf-8")
+f_out = codecs.open("out.json","w", encoding="utf-8")
 
 rows = table.xpath("//tr")
 print len(rows)
-for row in rows:
+#~ liste = {}
+liste = []
+for i, row in enumerate(rows):
     cells = row.xpath("td")
     if len(cells)==8:
         #~ print cells[1].xpath("string()")
@@ -40,9 +44,16 @@ for row in rows:
                 out.append(links[0].xpath("string()"))
             else:
                 out.append(cell.xpath("string()"))
-        f.write('<li><a data-icon="info" data-rel="dialog" data-transition="pop" href="#no_info">%s (%s)</a></li>\n' % (out[0], out[1]))
+		#~ liste.update({"n%s"% (i):{"name":out[0], "hight":out[1]}})
+        liste.append({"name":out[0], "hight":out[1]})
+        
+        
+        #~ f.write('<li><a data-icon="info" data-rel="dialog" data-transition="pop" href="#no_info">%s (%s)</a></li>\n' % (out[0], out[1]))
 
-f.close()
+#~ f.close()
+
+f_out.write(json.dumps({"mountains" : {"Switzerland" : liste}}))
+f_out.close()
 
 #~ for table in tables:
     #~ print len(table)

@@ -56,7 +56,7 @@ function activate_mailtext(){
         empty_mailtext.attr("id", "mailtext")
         $("#mailtexts").empty()
         
-        for (var i=0; i<=texts.length; i++){
+        for (var i=0; i < texts.length; i++){
             text = texts[i];
         //~ for each (var text in texts) {
             var new_mailtext = empty_mailtext.clone();
@@ -90,25 +90,21 @@ $(document).ready(function(){
     $('#countries').empty();
    
    //~ for each (var country in lget("countries")) {
-   for (var i = 0; i <= lget("countries").length; i++) {
+   for (var i = 0; i < lget("countries").length; i++) {
         var country = lget("countries")[i];
-        
-        country_name = country["name"][lang()];
+        var country_name = country["name"][lang()];
         new_country = empty_country.clone();
         new_country.find("#country_name").text(country_name);
         new_country.find("#country_icon").attr("src", "icons/gif/"+country["code"]+".gif");
         var count = 0
         
-        for each (var mountain in lget("mountains")) {
-        //~ alert(lget("mountains").length);
-        //~ for (var j=0; j <= lget("mountains").length; j++) {
-            //~ var mountain = lget("mountains")[j];
-            //~ alert(mountain[1]["country"]);
+        //~ for each (var mountain in lget("mountains")) {
+        for (var j=0; j < lget("mountains").length; j++) {
+            var mountain = lget("mountains")[j];
             if (mountain[1]["country"] == country["code"]) {
                 count = count + 1;
             };
         };
-        //~ alert(count);
         new_country.find("#n_countries").text(count);
         $('#countries').append(new_country);
    }

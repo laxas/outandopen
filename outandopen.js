@@ -1,4 +1,5 @@
 
+
 function lget(key){
     return JSON.parse(localStorage.getItem(key));
 }
@@ -7,25 +8,88 @@ function lset(key, object){
     localStorage.setItem(key, JSON.stringify(object));
 }
 
+function load (key) { 
+    if (lget(key + "_date") == null) {
+        jQuery.getJSON(key + '.json', 
+            function(json) {
+                lset(key, json);
+                lset(key + "_date", new Date().getTime());
+            }
+        )
+    }
+};
+
+function force_load (key) { 
+    jQuery.getJSON(key + '.json', 
+        function(json) {
+            lset(key, json);
+            lset(key + "_date", new Date().getTime());
+        }
+    )
+};
+
+
+function update_data () {
+    force_load("tags");
+    force_load("mountains");
+    force_load("texts");
+    force_load("countries");
+}
+
+function lang () {return lget("lang")}; 
+
+
+load("tags");
+load("mountains");
+load("texts");
+load("countries");
+lset("lang","de"); 
 
 function activate_mailtext(){
-    texts = ["Hallo alle , <br>", "Hallo zusammen", "wie wäre es mit einer Bergtour am ", "nächsten Samstag", "nächsten Sonntag", "kommenden Wochenende", "Sagt bitte Bescheid, ob ihr Lust und Zeit habt", "Viele Grüße"];
+    texts = lget("texts")
     empty_mailtext = $("#empty_mailtext")
     if (empty_mailtext.length == 1) {
         empty_mailtext.attr("id", "mailtext")
-        //~ alert(empty_mailtext.text)
         $("#mailtexts").empty()
         for each (var text in texts) {
             var new_mailtext = empty_mailtext.clone();
             new_mailtext.text(text);
             $('#mailtexts').append(new_mailtext);
-            //~ alert(text);
         };
     };
 }
 
+function activate_countries(){
+    countries = lget("countries");
+    //~ empty_mailtext = $("#empty_mailtext")
+    //~ if (empty_mailtext.length == 1) {
+        //~ empty_mailtext.attr("id", "mailtext")
+        //~ $("#mailtexts").empty()
+        //~ for each (var text in texts) {
+            //~ var new_mailtext = empty_mailtext.clone();
+            //~ new_mailtext.text(text);
+            //~ $('#mailtexts').append(new_mailtext);
+        //~ };
+    //~ };
+}
+
+
+
 $(document).ready(function(){
+
    activate_mailtext();
+   
+   var empty_country = $('#countries li');
+    $('#countries').empty();
+   
+   for each (var country in lget("countries")) {
+        country_name = country["name"][lang()];
+        new_country = empty_country.clone();
+        new_country.find("#country_name").text(country_name);
+        new_country.find("#country_icon").attr("src", "he");
+        $('#countries').append(new_country);
+   }
+   
    
    $("#mailtexts a").click(function(event){
      $(this).attr("data-theme", "c");
@@ -39,6 +103,8 @@ $(document).ready(function(){
      //~ $("#mailbody").text($("#mailbody").text() + " " + $(this).text());
    });
  });
+
+
 
 
 function load_data () { 
@@ -116,9 +182,4 @@ jQuery.getJSON('out3.json',
 
 	}
 );
-//~ alert(mountains["Switzerland"][0].name);
 
-
-$(document).ready(function(){
-   
- });

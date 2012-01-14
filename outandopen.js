@@ -139,18 +139,18 @@ function load_data () {
 
 
 
-jQuery.getJSON('out3.json', 
-	function(json) {
-        var empty_country = $('#countries li');
-        $('#countries').empty();
+//~ jQuery.getJSON('out3.json', 
+	//~ function(json) {
+        //~ var empty_country = $('#countries li');
+        //~ $('#countries').empty();
         //~ empty_country.find("ul").empty();
         
-        for each (var mountains in json.countries) {
+        //~ for each (var mountains in json.countries) {
 
             // get country name, put as header
-            var country_name = mountains[0].country;
-            var new_country = empty_country.clone();
-            new_country.find('div').text(country_name);
+            //~ var country_name = mountains[0].country;
+            //~ var new_country = empty_country.clone();
+            //~ new_country.find('div').text(country_name);
 
             //~ new_country.attr("id", country_name)
 
@@ -170,16 +170,16 @@ jQuery.getJSON('out3.json',
             //~ 
             //~ new_country.find('li:last').remove();
             //~ alert(new_country.length);
-            $('#countries').append(new_country[0]);
+            //~ $('#countries').append(new_country[0]);
 
             //~ $('#countries').append("<li><div>empty country</div></li>" );
         
-        };
+        //~ };
         
         //~ alert(json.mountains.Germany[0].name);
 
 
 
-	}
-);
-
+	//~ }
+//~ );
+//~ 

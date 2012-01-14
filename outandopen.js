@@ -108,7 +108,7 @@ $(document).ready(function(){
                 count = count + 1;
             };
         };
-        alert(count);
+        //~ alert(count);
         new_country.find("#n_countries").text(count);
         $('#countries').append(new_country);
    }

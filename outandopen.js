@@ -33,6 +33,7 @@ function update_data () {
     force_load("tags");
     force_load("mountains");
     force_load("texts");
+    force_load("lang");
     force_load("countries");
 }
 
@@ -43,7 +44,10 @@ load("tags");
 load("mountains");
 load("texts");
 load("countries");
+load("lang");
 lset("lang","de"); 
+
+
 
 function activate_mailtext(){
     texts = lget("texts")
@@ -86,7 +90,14 @@ $(document).ready(function(){
         country_name = country["name"][lang()];
         new_country = empty_country.clone();
         new_country.find("#country_name").text(country_name);
-        new_country.find("#country_icon").attr("src", "he");
+        new_country.find("#country_icon").attr("src", "icons/gif/"+country["code"]+".gif");
+        var count = 0
+        for each (var mountain in lget("mountains")) {
+            if (mountain[1]["country"] == country["code"]) {
+                count = count + 1;
+            };
+        };
+        new_country.find("#n_countries").text(count);
         $('#countries').append(new_country);
    }
    

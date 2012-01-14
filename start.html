@@ -64,8 +64,13 @@
 		<a href="#lodges" data-role="button" data-theme="b" >Lodges</a>
 		<a href="#calender" data-role="button" data-theme="b" >Calender</a>
 -->
+<!--
 		<a href="javascript:load_data()" data-role="button" data-theme="c" >Load Mountains</a>
 		<a href="javascript:activate_mailtext()" data-role="button" data-theme="c" >Activate Mailtexts</a>
+-->
+<!--
+		<a href="#updates" data-role="button" data-theme="b" >Updates</a>
+-->
 		
 </div>
 
@@ -82,6 +87,8 @@
         <p>A few words on navigation: whenever you see the <strong>i</strong> on a
         button or in a header you get backround information. The <strong>home</strong> sign
         in the headers brings you to the front page.</p>
+        <a href="javascript:update_data()" data-role="button" data-theme="c" >Update</a>
+        
 <!--
         <p>At the moment no monitary support is needed but you can show your
         appreciation by flattering <strong>OutandOpen</strong></p>
@@ -201,14 +208,15 @@
 	</div><!-- /header -->
 
 	<div data-role="content">
-        <p><strong>Mountains</strong> (just a showcase) data form wikipedia</p>
-        
+		<p><strong>Mountains by Country</strong></p>
         <ul data-role="listview" id="countries">
-            <li><div>empty country</div>
-                <ul id="mountains" >
-                    <li><a data-icon="info" data-rel="dialog" data-transition="pop" href="#no_info">empty mountain</a></li>
-                </ul>
+            <li><a href="#info">
+				<img id="country_icon" src="icons/de.png" class="ui-li-icon">
+				<span id="country_name">empty country</span><span class="ui-li-count">4</span>
+				</a>
             </li>
+            
+			
         </ul>
 	</div>
 

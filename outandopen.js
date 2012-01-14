@@ -98,13 +98,17 @@ $(document).ready(function(){
         new_country.find("#country_name").text(country_name);
         new_country.find("#country_icon").attr("src", "icons/gif/"+country["code"]+".gif");
         var count = 0
-        for (var j=0;j <= lget("mountains").length; j++) {
-            var mountain = lget("mountains")[j];
-        //~ for each (var mountain in lget("mountains")) {
+        
+        for each (var mountain in lget("mountains")) {
+        //~ alert(lget("mountains").length);
+        //~ for (var j=0; j <= lget("mountains").length; j++) {
+            //~ var mountain = lget("mountains")[j];
+            //~ alert(mountain[1]["country"]);
             if (mountain[1]["country"] == country["code"]) {
                 count = count + 1;
             };
         };
+        alert(count);
         new_country.find("#n_countries").text(count);
         $('#countries').append(new_country);
    }

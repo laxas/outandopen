@@ -55,7 +55,10 @@ function activate_mailtext(){
     if (empty_mailtext.length == 1) {
         empty_mailtext.attr("id", "mailtext")
         $("#mailtexts").empty()
-        for each (var text in texts) {
+        
+        for (var i=0; i<=texts.length; i++){
+            text = texts[i];
+        //~ for each (var text in texts) {
             var new_mailtext = empty_mailtext.clone();
             new_mailtext.text(text);
             $('#mailtexts').append(new_mailtext);
@@ -86,13 +89,18 @@ $(document).ready(function(){
    var empty_country = $('#countries li');
     $('#countries').empty();
    
-   for each (var country in lget("countries")) {
+   //~ for each (var country in lget("countries")) {
+   for (var i = 0; i <= lget("countries").length; i++) {
+        var country = lget("countries")[i];
+        
         country_name = country["name"][lang()];
         new_country = empty_country.clone();
         new_country.find("#country_name").text(country_name);
         new_country.find("#country_icon").attr("src", "icons/gif/"+country["code"]+".gif");
         var count = 0
-        for each (var mountain in lget("mountains")) {
+        for (var j=0;j <= lget("mountains").length; j++) {
+            var mountain = lget("mountains")[j];
+        //~ for each (var mountain in lget("mountains")) {
             if (mountain[1]["country"] == country["code"]) {
                 count = count + 1;
             };
@@ -118,18 +126,18 @@ $(document).ready(function(){
 
 
 
-function load_data () { 
-    jQuery.getJSON('out.json', 
-        function(json) {
+//~ function load_data () { 
+    //~ jQuery.getJSON('out.json', 
+        //~ function(json) {
 
             //~ var empty_country = $('#countries li');
             //~ $('#countries').empty();
             
             //~ alert(json.mountains.length);
             
-            for each (var mountain in json.mountains) {
-                
-                lset(mountain[0], mountain[1]);
+            //~ for each (var mountain in json.mountains) {
+                //~ 
+                //~ lset(mountain[0], mountain[1]);
         
                 // get country name, put as header
                 //~ var country_name = mountains[0].country;
@@ -138,15 +146,15 @@ function load_data () {
 //~ 
                 //~ $('#countries').append(new_country[0]);
 
-            
-            };
+            //~ 
+            //~ };
             
             //~ alert(JSON.parse(localStorage.getItem("http://de.wikipedia.org/wiki/Allalinhorn"))["name"]);
-            alert(lget("http://de.wikipedia.org/wiki/Allalinhorn")["name"]);
+            //~ alert(lget("http://de.wikipedia.org/wiki/Allalinhorn")["name"]);
             //~ document.write(localStorage.getItem("http://de.wikipedia.org/wiki/Allalinhorn")["name"]);
-        }
-    );
-}
+        //~ }
+    //~ );
+//~ }
 
 
 

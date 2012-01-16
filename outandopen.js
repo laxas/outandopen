@@ -99,12 +99,22 @@ $(document).ready(function(){
         var count = 0
         
         //~ for each (var mountain in lget("mountains")) {
-        for (var j=0; j < lget("mountains").length; j++) {
-            var mountain = lget("mountains")[j];
+
+
+        //~ for (var j=0; j < lget("mountains").length; j++) {
+            //~ var mountain = lget("mountains")[j];
+            //~ if (mountain[1]["country"] == country["code"]) {
+                //~ count = count + 1;
+            //~ };
+        //~ };
+        
+        $.each(lget("mountains"), function (index, mountain) {
             if (mountain[1]["country"] == country["code"]) {
                 count = count + 1;
             };
-        };
+        });
+
+
         new_country.find("#n_countries").text(count);
         $('#countries').append(new_country);
    }

@@ -35,6 +35,7 @@ function update_data () {
     force_load("texts");
     force_load("lang");
     force_load("countries");
+    force_load("items");
 }
 
 function lang () {return lget("lang")}; 
@@ -45,6 +46,7 @@ load("mountains");
 load("texts");
 load("countries");
 load("lang");
+load("items");
 lset("lang","de"); 
 
 
@@ -84,7 +86,35 @@ function activate_countries(){
 
 $(document).ready(function(){
 
-   activate_mailtext();
+    activate_mailtext();
+
+   
+    var empty_item = $('#items li');
+    $('#items').empty();
+
+
+    var items = lget("items");
+    //~ alert(items.length);
+
+    for (var i = 0; i < items.length; i++) {
+        var item = items[i];
+        item_name = item["name"][lang()]+ " " + item["brand"] + " " + 
+                    item["typ"]
+        if (item["size"]=="") {}
+        else {
+            item_name = item_name + " (" + item["size"] + ")" 
+            }
+        //~ item_count = item["count"];
+        
+        new_item = empty_item.clone();
+        new_item.find("#item_name").text(item_name);
+        new_item.find("#item_weight").text(item["weight"] + "g");
+        
+        
+        $('#items').append(new_item);
+        }
+    //~ alert("hi");
+   
    
    var empty_country = $('#countries li');
     $('#countries').empty();

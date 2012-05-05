@@ -1,4 +1,20 @@
-[
+<head>
+
+    <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+    
+    
+
+</head>
+
+<body>
+
+    <div id="list"></div>
+
+
+    <script>
+
+<!--
+    var list2 = [
     {"count": "1", 
      "name": {"de": "Rucksack"}, 
      "weight": "1350", 
@@ -12,3 +28,38 @@
      "typ": "", 
      "size": ""}, 
     {"count": "1", "name": {"de": "Karabiner"}, "weight": "66", "brand": "Eleven", "typ": "", "size": ""}, {"count": "1", "name": {"de": "Karabiner"}, "weight": "88", "brand": "Mammut", "typ": "", "size": ""}, {"count": "5", "name": {"de": "Express"}, "weight": "100", "brand": "Stubai", "typ": "Ice Clip", "size": ""}, {"count": "1", "name": {"de": "Bandschlinge "}, "weight": "26", "brand": "", "typ": "", "size": "31cm"}, {"count": "1", "name": {"de": "Bandschlinge"}, "weight": "46", "brand": "", "typ": "", "size": "60cm"}, {"count": "1", "name": {"de": "Bandschlinge"}, "weight": "66", "brand": "Mammut", "typ": "", "size": "80cm"}, {"count": "1", "name": {"de": "Bandschlinge"}, "weight": "70", "brand": "Mammut", "typ": "8mm dyneema", "size": "240cm"}, {"count": "1", "name": {"de": "Kletterhelm"}, "weight": "294", "brand": "Grivel", "typ": "Air tech", "size": ""}, {"count": "1", "name": {"de": "Klettersteigsett"}, "weight": "594", "brand": "Petzl", "typ": "Scorpio Eashook", "size": ""}, {"count": "1", "name": {"de": "Brustgurt"}, "weight": "268", "brand": "Elliot", "typ": "", "size": ""}, {"count": "1", "name": {"de": "Klettersteighandschuhe"}, "weight": "86", "brand": "Kong", "typ": "", "size": ""}, {"count": "1", "name": {"de": "Sack"}, "weight": "298", "brand": "Ortlieb", "typ": "", "size": "10l"}, {"count": "1", "name": {"de": "Treckinghose"}, "weight": "428", "brand": "The Norce Face", "typ": "", "size": ""}, {"count": "", "name": {"de": "Treckinghose"}, "weight": "354", "brand": "", "typ": "", "size": ""}, {"count": "", "name": {"de": "Treckinghandtuch klein"}, "weight": "85", "brand": "", "typ": "", "size": ""}, {"count": "", "name": {"de": "Unterzieh-T-Shirt"}, "weight": "140", "brand": "", "typ": "", "size": ""}, {"count": "", "name": {"de": "(Trecking)socken"}, "weight": "75", "brand": "", "typ": "", "size": ""}, {"count": "", "name": {"de": "Treckinghemd kurz"}, "weight": "216", "brand": "Jack Wolfskin", "typ": "", "size": "L"}, {"count": "1", "name": {"de": "Schildm\u00fctze"}, "weight": "84", "brand": "Kerler", "typ": "", "size": ""}, {"count": "1", "name": {"de": "Regenhose"}, "weight": "210", "brand": "Vaude", "typ": "", "size": ""}, {"count": "1", "name": {"de": "Regenhose"}, "weight": "496", "brand": "", "typ": "Reflektorstreifen", "size": ""}, {"count": "1", "name": {"de": "Regenhose"}, "weight": "394", "brand": "Crane", "typ": "", "size": ""}, {"count": "", "name": {"de": "H\u00fcttenschlafsack"}, "weight": "452", "brand": "", "typ": "", "size": ""}, {"count": "ca. 20", "name": {"de": "Accu"}, "weight": "12", "brand": "", "typ": "", "size": "AAA"}, {"count": "", "name": {"de": "Accu"}, "weight": "30", "brand": "", "typ": "", "size": "AA"}, {"count": "", "name": {"de": "Stirnlampe"}, "weight": "116", "brand": "", "typ": "", "size": ""}, {"count": "", "name": {"de": "MP3-Player"}, "weight": "50", "brand": "", "typ": "", "size": ""}, {"count": "", "name": {"de": "Handy"}, "weight": "96", "brand": "SonyEricson", "typ": "", "size": ""}, {"count": "", "name": {"de": "Geldbeutel"}, "weight": "170", "brand": "", "typ": "", "size": ""}, {"count": "", "name": {"de": "St\u00f6cke"}, "weight": "538", "brand": "TCM", "typ": "", "size": ""}, {"count": "", "name": {"de": "Gr\u00f6del"}, "weight": "546", "brand": "Edelrid", "typ": "", "size": ""}, {"count": "", "name": {"de": "Handschule"}, "weight": "152", "brand": "Lafuma", "typ": "lang Winter", "size": "XL"}, {"count": "", "name": {"de": "Handschuhe"}, "weight": "112", "brand": "Alex", "typ": "lang", "size": "XL"}, {"count": "", "name": {"de": "Fahrradhandschuhe"}, "weight": "62", "brand": "Roeckl", "typ": "kurz", "size": "XL"}, {"count": "", "name": {"de": "Fahrradhandschuhe"}, "weight": "46", "brand": "Crane", "typ": "kurz", "size": "XL"}, {"count": "", "name": {"de": "Fahrradhandschuhe"}, "weight": "48", "brand": "Shamp", "typ": "kurz", "size": "XL"}, {"count": "", "name": {"de": "Ohropax"}, "weight": "5", "brand": "", "typ": "", "size": ""}, {"count": "", "name": {"de": "Sonnenbrille"}, "weight": "28", "brand": "Alpina", "typ": "", "size": ""}, {"count": "", "name": {"de": "Sonnenbrille"}, "weight": "32", "brand": "Crane", "typ": "", "size": ""}, {"count": "1", "name": {"de": "Rebschnur"}, "weight": "20", "brand": "", "typ": "4mm", "size": "2m"}, {"count": "", "name": {"de": "Rebschnur"}, "weight": "", "brand": "", "typ": "6mm", "size": "1m"}, {"count": "2", "name": {"de": "Treckingbesteck"}, "weight": "10", "brand": "", "typ": "", "size": ""}, {"count": "2", "name": {"de": "Sitzmatte"}, "weight": "20", "brand": "", "typ": "", "size": ""}, {"count": "1", "name": {"de": "First Aide"}, "weight": "146", "brand": "", "typ": "", "size": ""}, {"count": "", "name": {"de": "Wasserfl\u00e4schchen"}, "weight": "514", "brand": "", "typ": "", "size": ""}, {"count": "", "name": {"de": "Obst"}, "weight": "1000", "brand": "", "typ": "", "size": ""}, {"count": "", "name": {"de": "M\u00fcsliriegel"}, "weight": "28", "brand": "", "typ": "", "size": ""}, {"count": "", "name": {"de": "Badehose"}, "weight": "66", "brand": "", "typ": "", "size": ""}, {"count": "", "name": {"de": "Rettungsweste"}, "weight": "108", "brand": "", "typ": "", "size": ""}, {"count": "", "name": {"de": "Unterhosen"}, "weight": "46", "brand": "", "typ": "", "size": ""}, {"count": "", "name": {"de": "Garmaschen"}, "weight": "248", "brand": "", "typ": "", "size": ""}, {"count": "", "name": {"de": "Handyt\u00e4schchen"}, "weight": "36", "brand": "", "typ": "", "size": ""}, {"count": "", "name": {"de": "Treckingg\u00fcrtel"}, "weight": "76", "brand": "", "typ": "", "size": ""}, {"count": "", "name": {"de": "Treckingg\u00fcrtel"}, "weight": "", "brand": "", "typ": "Metal", "size": ""}, {"count": "", "name": {"de": "Softshell"}, "weight": "560", "brand": "", "typ": "", "size": ""}, {"count": "", "name": {"de": "Regenjacke"}, "weight": "650", "brand": "", "typ": "", "size": ""}, {"count": "", "name": {"de": "Fleecjacke"}, "weight": "368", "brand": "", "typ": "", "size": ""}, {"count": "", "name": {"de": "Sonnenhut"}, "weight": "88", "brand": "", "typ": "", "size": ""}, {"count": "", "name": {"de": "Sonnencreme"}, "weight": "90", "brand": "", "typ": "", "size": ""}, {"count": "", "name": {"de": "Zahncreme"}, "weight": "50", "brand": "", "typ": "", "size": ""}, {"count": "", "name": {"de": "Zahnb\u00fcrste"}, "weight": "14", "brand": "", "typ": "", "size": ""}, {"count": "", "name": {"de": "Kamm"}, "weight": "8", "brand": "", "typ": "", "size": ""}, {"count": "", "name": {"de": "Duschgeel klein"}, "weight": "50", "brand": "", "typ": "", "size": ""}, {"count": "", "name": {"de": "lange Unterhose"}, "weight": "138", "brand": "", "typ": "", "size": ""}, {"count": "", "name": {"de": "Digitalkamera"}, "weight": "144", "brand": "", "typ": "", "size": ""}, {"count": "", "name": {"de": "Materialkarabiner"}, "weight": "9", "brand": "", "typ": "", "size": ""}, {"count": "", "name": {"de": "H\u00fcttenschuhe"}, "weight": "142", "brand": "", "typ": "", "size": ""}, {"count": "", "name": {"de": "Teebeutel"}, "weight": "1", "brand": "", "typ": "", "size": ""}, {"count": "", "name": {"de": "erste Hilfe Set"}, "weight": "", "brand": "", "typ": "", "size": ""}, {"count": "", "name": {"de": "leicht und cross"}, "weight": "125", "brand": "", "typ": "", "size": ""}, {"count": "", "name": {"de": "Schockolade"}, "weight": "100", "brand": "", "typ": "", "size": ""}, {"count": "", "name": {"de": "Wanderkarte"}, "weight": "66", "brand": "", "typ": "", "size": ""}, {"count": "", "name": {"de": "Br\u00f6tchen"}, "weight": "", "brand": "", "typ": "", "size": ""}, {"count": "", "name": {"de": "Halstuch"}, "weight": "58", "brand": "", "typ": "", "size": ""}, {"count": "", "name": {"de": "Allumatte"}, "weight": "112", "brand": "", "typ": "", "size": ""}, {"count": "", "name": {"de": "Wanderschuhe"}, "weight": "1240", "brand": "", "typ": "", "size": ""}, {"count": "", "name": {"de": "Schl\u00fcsselbund"}, "weight": "104", "brand": "", "typ": "", "size": ""}, {"count": "1", "name": {"de": "Fahrradhelm"}, "weight": "", "brand": "", "typ": "", "size": ""}, {"count": "1", "name": {"de": "Rucksack"}, "weight": "2500", "brand": "Vaude", "typ": "profile II", "size": "65l"}, {"count": "", "name": {"de": "Jeanshose"}, "weight": "700", "brand": "", "typ": "", "size": ""}, {"count": "", "name": {"de": "Duschgeel/Shampoo gro\u00df"}, "weight": "180", "brand": "", "typ": "", "size": ""}, {"count": "", "name": {"de": "Turnschuhe"}, "weight": "876", "brand": "", "typ": "", "size": ""}, {"count": "", "name": {"de": "Kugelschreiber"}, "weight": "8", "brand": "", "typ": "", "size": ""}, {"count": "", "name": {"de": "Sonnencreme gro\u00df"}, "weight": "214", "brand": "", "typ": "", "size": ""}, {"count": "", "name": {"de": "Hemd lang"}, "weight": "", "brand": "", "typ": "", "size": ""}, {"count": "", "name": {"de": "Treckinghemd lang"}, "weight": "", "brand": "", "typ": "", "size": ""}, {"count": "", "name": {"de": "Toilettenbeutel"}, "weight": "160", "brand": "", "typ": "", "size": ""}, {"count": "", "name": {"de": "Rasierer"}, "weight": "30", "brand": "", "typ": "", "size": ""}, {"count": "", "name": {"de": "Rasierseife"}, "weight": "100", "brand": "", "typ": "", "size": ""}, {"count": "", "name": {"de": "Ladeger\u00e4t Handy"}, "weight": "142", "brand": "", "typ": "", "size": ""}, {"count": "", "name": {"de": "Ladeger\u00e4t Camera"}, "weight": "66", "brand": "", "typ": "", "size": ""}, {"count": "", "name": {"de": "Schlafhose"}, "weight": "", "brand": "", "typ": "", "size": ""}, {"count": "", "name": {"de": "Schlaf-T-shirt"}, "weight": "", "brand": "", "typ": "", "size": ""}, {"count": "2", "name": {"de": "Fahrradtasche"}, "weight": "950", "brand": "Ortlieb", "typ": "", "size": ""}, {"count": "", "name": {"de": "Fahrradschlauch"}, "weight": "152", "brand": "", "typ": "", "size": ""}, {"count": "", "name": {"de": "Werkzeugset"}, "weight": "228", "brand": "", "typ": "", "size": ""}, {"count": "", "name": {"de": "Schlatzzug"}, "weight": "16", "brand": "", "typ": "", "size": ""}, {"count": "", "name": {"de": "Bremszug"}, "weight": "24", "brand": "", "typ": "", "size": ""}, {"count": "", "name": {"de": "Nippelspanner"}, "weight": "76", "brand": "", "typ": "", "size": ""}, {"count": "", "name": {"de": "Luftpumpe"}, "weight": "126", "brand": "", "typ": "", "size": ""}, {"count": "", "name": {"de": "Zange"}, "weight": "76", "brand": "", "typ": "", "size": ""}, {"count": "", "name": {"de": "1,5l Wasser"}, "weight": "1500", "brand": "", "typ": "", "size": ""}]
+; 
+-->
+    
+    function lget(key){
+        return JSON.parse(localStorage.getItem(key));
+    }
+
+    function lset(key, object){
+        localStorage.setItem(key, JSON.stringify(object));
+    }
+
+    function load (key) { 
+        if (lget(key + "_date") == null) {
+            jQuery.getJSON(key + '.json', 
+                function(json) {
+                    lset(key, json);
+                    lset(key + "_date", new Date().getTime());
+                    }
+                )
+            }
+        };
+
+    load("items");
+
+    var list3 = lget("items");
+
+    
+    $.each(list3, function(i, element){
+        $("#list").append("<p>"+element["weight"]+"</p>");
+        });
+    
+    </script>
+
+
+</body>

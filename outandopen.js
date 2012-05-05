@@ -86,20 +86,14 @@ function activate_countries(){
 
 $(document).ready(function(){
 
-    activate_mailtext();
-
-   
-    //~ var empty_item = $('#items li');
-    //~ $('#items').empty();
-
+    //~ activate_mailtext();
 
     var items = lget("items");
 
-    //~ alert("Ho");
     $.each(items, function(i, item) {
-
-        obj = "<li class='ui-li ui-li-static ui-body-c ui-li-has-count'>"+
-              item["count"]+" x "+item["name"][lang()]+" "+item["brand"]+" "+item["typ"];
+        obj = "<li class='ui-li ui-li-static ui-body-c ui-li-has-count'>"
+              +item["count"]+" x "+item["name"][lang()]+" "+item["brand"]+" "
+              +item["typ"];
         
         if (item["size"]=="") {}
         else                  {obj = obj + " (" + item["size"] + ")"};
@@ -107,29 +101,12 @@ $(document).ready(function(){
         obj = obj + "<span class='ui-li-count ui-btn-up-c ui-btn-corner-all'>"
                     +item["weight"]+"g</span>";
                               
-
         $('#items_ul').append(obj);
         });
-    //~ alert("hi");
-
-
-    //~ for (var i = 0; i < items.length; i++) {
-        //~ var item = items[i];
-        //~ item_name = item["name"][lang()]+ " " + item["brand"] + " " + 
-                    //~ item["typ"]
-        //~ if (item["size"]=="") {}
-        //~ else {
-            //~ item_name = item_name + " (" + item["size"] + ")" 
-            //~ }
-        //~ 
-        //~ new_item = empty_item.clone();
-        //~ new_item.find("#item_name").text(item_name);
-        //~ new_item.find("#item_weight").text(item["weight"] + "g");
-        //~ 
-        //~ 
-        //~ $('#items').append(new_item);
-        //~ }
    
+
+
+
    
    var empty_country = $('#countries li');
     $('#countries').empty();

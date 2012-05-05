@@ -97,11 +97,18 @@ $(document).ready(function(){
 
     //~ alert("Ho");
     $.each(items, function(i, item) {
-        $('#items_ul').append("<li class='ui-li ui-li-static ui-body-c ui-li-has-count'>" +
-                              "<span>"+item["name"][lang()]+"</span>"+
-                              "<span class='ui-li-count ui-btn-up-c ui-btn-corner-all'>"+item["weight"]+"g</span></li>"
+
+        obj = "<li class='ui-li ui-li-static ui-body-c ui-li-has-count'>"+
+              item["count"]+" x "+item["name"][lang()]+" "+item["brand"]+" "+item["typ"];
+        
+        if (item["size"]=="") {}
+        else                  {obj = obj + " (" + item["size"] + ")"};
+
+        obj = obj + "<span class='ui-li-count ui-btn-up-c ui-btn-corner-all'>"
+                    +item["weight"]+"g</span>";
                               
-                              );
+
+        $('#items_ul').append(obj);
         });
     //~ alert("hi");
 

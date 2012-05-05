@@ -89,31 +89,39 @@ $(document).ready(function(){
     activate_mailtext();
 
    
-    var empty_item = $('#items li');
-    $('#items').empty();
+    //~ var empty_item = $('#items li');
+    //~ $('#items').empty();
 
 
     var items = lget("items");
-    //~ alert(items.length);
 
-    for (var i = 0; i < items.length; i++) {
-        var item = items[i];
-        item_name = item["name"][lang()]+ " " + item["brand"] + " " + 
-                    item["typ"]
-        if (item["size"]=="") {}
-        else {
-            item_name = item_name + " (" + item["size"] + ")" 
-            }
-        //~ item_count = item["count"];
-        
-        new_item = empty_item.clone();
-        new_item.find("#item_name").text(item_name);
-        new_item.find("#item_weight").text(item["weight"] + "g");
-        
-        
-        $('#items').append(new_item);
-        }
+    //~ alert("Ho");
+    $.each(items, function(i, item) {
+        $('#items_ul').append("<li class='ui-li ui-li-static ui-body-c ui-li-has-count'>" +
+                              "<span>"+item["name"][lang()]+"</span>"+
+                              "<span class='ui-li-count ui-btn-up-c ui-btn-corner-all'>"+item["weight"]+"g</span></li>"
+                              
+                              );
+        });
     //~ alert("hi");
+
+
+    //~ for (var i = 0; i < items.length; i++) {
+        //~ var item = items[i];
+        //~ item_name = item["name"][lang()]+ " " + item["brand"] + " " + 
+                    //~ item["typ"]
+        //~ if (item["size"]=="") {}
+        //~ else {
+            //~ item_name = item_name + " (" + item["size"] + ")" 
+            //~ }
+        //~ 
+        //~ new_item = empty_item.clone();
+        //~ new_item.find("#item_name").text(item_name);
+        //~ new_item.find("#item_weight").text(item["weight"] + "g");
+        //~ 
+        //~ 
+        //~ $('#items').append(new_item);
+        //~ }
    
    
    var empty_country = $('#countries li');

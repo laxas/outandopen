@@ -54,13 +54,15 @@
 	<div data-role="content">
 
 	</div>
-		<a href="#profile" data-role="button" data-icon="gear" data-theme="b" >Profile</a>
+		<a id="profile" href="#profile" data-role="button" data-icon="gear" data-theme="b" >Profile</a>
 <!--
         <a href="#friends" data-role="button" data-theme="b" >Friends</a>
 		<a href="#tours" data-role="button" data-theme="b" >Tours</a>
 -->
-		<a href="#mountains" lang="mountains" data-role="button" data-theme="b" >Mountains</a>
+		<a href="#peaks" lang="peaks" data-role="button" data-theme="b" >Peaks</a>
+<!--
 		<a href="#invitation" lang="invitation" data-role="button" data-theme="b" >Invitation</a>
+-->
 		<a href="#items" lang="items" data-role="button" data-theme="b" >Items</a>
 <!--
 		<a href="#lodges" data-role="button" data-theme="b" >Lodges</a>
@@ -239,9 +241,27 @@
            data-rel="dialog" data-icon="info" href="#info" title="Info"
            data-theme="a"></a>
 	</div><!-- /header -->
+<!--
     <a class="update" href="#">update</a>
+-->
 	<div data-role="content">
 		<ul data-role="listview" id="items_ul"></ul>
+	</div>
+
+</div>
+
+
+<div data-role="page" id="peaks">
+	<div data-role="header">
+		<h1 lang="peaks">Peaks</h1>
+		<a class="ui-btn-left" data-iconpos="notext" data-icon="home"
+           href="#home" title="Home" data-theme="a"></a>
+        <a class="ui-btn-right" data-transition="pop" data-iconpos="notext"
+           data-rel="dialog" data-icon="info" href="#info" title="Info"
+           data-theme="a"></a>
+	</div><!-- /header -->
+	<div data-role="content">
+		<ul data-role="listview" id="peaks_ul"></ul>
 	</div>
 
 </div>

@@ -32,7 +32,7 @@ function force_load (key) {
 //~ var collections = ["tags","peaks","texts","countries","lang","items"];
 
 function update_data () {
-    var collections = ["lang","items"];
+    var collections = ["trans","lang","items"];
     $.each(collections, function (i, collection) {
         force_load(collection);
         });
@@ -41,7 +41,7 @@ function update_data () {
 
 function lang () {return lget("lang")}; 
 
-var collections = ["lang","items"];
+var collections = ["trans","lang","items"];
 $.each(collections, function (i, collection) {
     load(collection);    
     });
@@ -96,17 +96,42 @@ function items2html(){
         });
 };
 
+function load_sliders(){
+    $("#slider_fitness").val(lget("fitness")).slider("refresh"); 
+    $("#slider_climbing").val(lget("climbing")).slider("refresh"); 
+    $("#slider_hights").val(lget("hights")).slider("refresh"); 
+    };
 
+function get_lang(key){
+    return lget("trans")[key][lang()];
+    };
 
 $(document).ready(function(){
 
     items2html();
 
+    //~ $('h1[lang]').text(get_lang($('h1[lang]').attr("lang")));
+    
+    //~ var snippets = $('[lang]');
+    
+    $('h1[lang]').each(function(i)){
+        //~ alert(snippet.text());
+        snippet.text(get_lang(this.attr("lang")));
+        });
 
+    $('a[lang]').each(function(i, snippet){
+        //~ alert(snippet.text());
+        //~ snippet.text(get_lang(snippet.attr("lang")));
+        });
+    
+    
+    //~ $('[lang]').text(get_lang($('[lang]').attr("lang")));
 
     // Click Events    
     $("#update_button").click(function() {update_data();items2html()});
-    $(".update").click(function() {items2html()});
+    $(".update").click(function() {items2html();});
+    $("#profile").click(function() {load_sliders();});
+    
     
     // Change Events
     $("#slider_fitness").change(function() {
@@ -122,10 +147,6 @@ $(document).ready(function(){
     
     //~ activate_mailtext();
 
-    $("#slider_fitness").val(lget("fitness")).slider("refresh"); 
-    $("#slider_climbing").val(lget("climbing")).slider("refresh"); 
-    $("#slider_hights").val(lget("hights")).slider("refresh"); 
-    
     //~ force_load("items");
 
    

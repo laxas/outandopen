@@ -34,6 +34,7 @@ function force_load (key) {
 function update_data () {
     var collections = ["lang","items"];
     $.each(collections, function (i, collection) {
+        alert(collection);
         force_load(collection);
         });
 
@@ -101,7 +102,7 @@ $(document).ready(function(){
 
 
     // Click Events    
-    $("#update_button").click(function() {force_load();items2html()});
+    $("#update_button").click(function() {update_data();items2html()});
     
     // Change Events
     $("#slider_fitness").change(function() {

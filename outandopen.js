@@ -37,12 +37,6 @@ function update_data () {
         force_load(collection);
         });
 
-    //~ force_load("tags");
-    //~ force_load("mountains");
-    //~ force_load("texts");
-    //~ force_load("lang");
-    //~ force_load("countries");
-    //~ force_load("items");
 };
 
 function lang () {return lget("lang")}; 
@@ -51,13 +45,6 @@ var collections = ["lang","items"];
 $.each(collections, function (i, collection) {
     load(collection);    
     });
-
-//~ load("tags");
-//~ load("mountains");
-//~ load("texts");
-//~ load("countries");
-//~ load("lang");
-//~ load("items");
 
 lset("lang","de"); 
 
@@ -106,7 +93,6 @@ function items2html(){
                     +item["weight"]+"g</span>";
         $('#items_ul').append(obj);
         });
-    alert("done");
 };
 
 
@@ -116,9 +102,26 @@ $(document).ready(function(){
 
     // Click Events    
     $("#update_button").click(function() {force_load();items2html()});
-
+    
+    // Change Events
+    $("#slider_fitness").change(function() {
+        lset("fitness", $("#slider_fitness").val());
+        });
+    $("#slider_climbing").change(function() {
+        lset("climbing", $("#slider_climbing").val());
+        });
+    $("#slider_hights").change(function() {
+        lset("hights", $("#slider_hights").val());
+        });
+    
+    
     //~ activate_mailtext();
 
+    $("#slider_fitness").val(lget("fitness")).slider("refresh"); 
+    $("#slider_climbing").val(lget("climbing")).slider("refresh"); 
+    $("#slider_hights").val(lget("hights")).slider("refresh"); 
+    
+    //~ force_load("items");
     items2html()
 
    

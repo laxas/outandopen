@@ -34,7 +34,6 @@ function force_load (key) {
 function update_data () {
     var collections = ["lang","items"];
     $.each(collections, function (i, collection) {
-        alert(collection);
         force_load(collection);
         });
 

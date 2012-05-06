@@ -30,11 +30,11 @@ function force_load (key) {
 
 
 //~ var collections = ["tags","peaks","texts","countries","lang","items"];
-var collections = ["lang","items"];
 
 function update_data () {
+    var collections = ["lang","items"];
     $.each(collections, function (i, collection) {
-        load(collection);
+        force_load(collection);
         });
 
     //~ force_load("tags");
@@ -47,7 +47,7 @@ function update_data () {
 
 function lang () {return lget("lang")}; 
 
-
+var collections = ["lang","items"];
 $.each(collections, function (i, collection) {
     load(collection);    
     });

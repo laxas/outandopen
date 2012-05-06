@@ -1,12 +1,12 @@
-
-
 function lget(key){
     return JSON.parse(localStorage.getItem(key));
-}
+};
 
 function lset(key, object){
     localStorage.setItem(key, JSON.stringify(object));
-}
+};
+
+
 
 function load (key) { 
     if (lget(key + "_date") == null) {
@@ -28,28 +28,28 @@ function force_load (key) {
     )
 };
 
+
 var collections = ["tags","mountains","texts","countries","lang","items"];
 
 function update_data () {
     $.each(collections, function (i, collection) {
         load(collection);    
-        };
-//~ 
+        });
+
     //~ force_load("tags");
     //~ force_load("mountains");
     //~ force_load("texts");
     //~ force_load("lang");
     //~ force_load("countries");
     //~ force_load("items");
-}
+};
 
 function lang () {return lget("lang")}; 
 
 
-
 $.each(collections, function (i, collection) {
     load(collection);    
-    };
+    });
 
 //~ load("tags");
 //~ load("mountains");
@@ -71,7 +71,6 @@ function activate_mailtext(){
         
         for (var i=0; i < texts.length; i++){
             text = texts[i];
-        //~ for each (var text in texts) {
             var new_mailtext = empty_mailtext.clone();
             new_mailtext.text(text);
             $('#mailtexts').append(new_mailtext);
@@ -95,7 +94,13 @@ function activate_countries(){
 
 
 
+
+
 $(document).ready(function(){
+
+
+    // Click Events    
+    $("#update_button").click(function() {force_load();});
 
     //~ activate_mailtext();
 

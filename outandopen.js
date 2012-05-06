@@ -83,6 +83,7 @@ function activate_countries(){
 
 function items2html(){
     var items = lget("items");
+    $('#items_ul').empty()
     $.each(items, function(i, item) {
         obj = "<li class='ui-li ui-li-static ui-body-c ui-li-has-count'>"
               +item["count"]+" x "+item["name"][lang()]+" "+item["brand"]+" "
@@ -99,9 +100,13 @@ function items2html(){
 
 $(document).ready(function(){
 
+    items2html();
+
+
 
     // Click Events    
     $("#update_button").click(function() {update_data();items2html()});
+    $(".update").click(function() {items2html()});
     
     // Change Events
     $("#slider_fitness").change(function() {
@@ -122,7 +127,6 @@ $(document).ready(function(){
     $("#slider_hights").val(lget("hights")).slider("refresh"); 
     
     //~ force_load("items");
-    items2html()
 
    
    var empty_country = $('#countries li');
@@ -135,7 +139,7 @@ $(document).ready(function(){
         new_country = empty_country.clone();
         new_country.find("#country_name").text(country_name);
         new_country.find("#country_icon").attr("src", "icons/gif/"+country["code"]+".gif");
-        var count = 0
+        var count = 0;
         
         //~ for each (var mountain in lget("mountains")) {
 

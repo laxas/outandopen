@@ -28,25 +28,36 @@ function force_load (key) {
     )
 };
 
+var collections = ["tags","mountains","texts","countries","lang","items"];
 
 function update_data () {
-    force_load("tags");
-    force_load("mountains");
-    force_load("texts");
-    force_load("lang");
-    force_load("countries");
-    force_load("items");
+    $.each(collections, function (i, collection) {
+        load(collection);    
+        };
+//~ 
+    //~ force_load("tags");
+    //~ force_load("mountains");
+    //~ force_load("texts");
+    //~ force_load("lang");
+    //~ force_load("countries");
+    //~ force_load("items");
 }
 
 function lang () {return lget("lang")}; 
 
 
-load("tags");
-load("mountains");
-load("texts");
-load("countries");
-load("lang");
-load("items");
+
+$.each(collections, function (i, collection) {
+    load(collection);    
+    };
+
+//~ load("tags");
+//~ load("mountains");
+//~ load("texts");
+//~ load("countries");
+//~ load("lang");
+//~ load("items");
+
 lset("lang","de"); 
 
 
@@ -104,8 +115,6 @@ $(document).ready(function(){
         $('#items_ul').append(obj);
         });
    
-
-
 
    
    var empty_country = $('#countries li');

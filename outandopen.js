@@ -115,8 +115,8 @@ $(document).ready(function(){
     //~ var snippets = $('[lang]');
     
     $('h1[lang]').each(function(i)){
-        //~ alert(snippet.text());
-        snippet.text(get_lang(this.attr("lang")));
+        alert(this.attr("lang"));
+        //~ snippet.text(get_lang(this.attr("lang")));
         });
 
     $('a[lang]').each(function(i, snippet){

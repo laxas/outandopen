@@ -29,11 +29,12 @@ function force_load (key) {
 };
 
 
-var collections = ["tags","mountains","texts","countries","lang","items"];
+//~ var collections = ["tags","peaks","texts","countries","lang","items"];
+var collections = ["lang","items"];
 
 function update_data () {
     $.each(collections, function (i, collection) {
-        load(collection);    
+        load(collection);
         });
 
     //~ force_load("tags");
@@ -76,7 +77,7 @@ function activate_mailtext(){
             $('#mailtexts').append(new_mailtext);
         };
     };
-}
+};
 
 function activate_countries(){
     countries = lget("countries");
@@ -90,9 +91,23 @@ function activate_countries(){
             //~ $('#mailtexts').append(new_mailtext);
         //~ };
     //~ };
-}
+};
 
 
+function items2html(){
+    var items = lget("items");
+    $.each(items, function(i, item) {
+        obj = "<li class='ui-li ui-li-static ui-body-c ui-li-has-count'>"
+              +item["count"]+" x "+item["name"][lang()]+" "+item["brand"]+" "
+              +item["typ"];
+        if (item["size"]=="") {}
+        else                  {obj = obj + " (" + item["size"] + ")"};
+        obj = obj + "<span class='ui-li-count ui-btn-up-c ui-btn-corner-all'>"
+                    +item["weight"]+"g</span>";
+        $('#items_ul').append(obj);
+        });
+    alert("done");
+};
 
 
 
@@ -100,26 +115,11 @@ $(document).ready(function(){
 
 
     // Click Events    
-    $("#update_button").click(function() {force_load();});
+    $("#update_button").click(function() {force_load();items2html()});
 
     //~ activate_mailtext();
 
-    var items = lget("items");
-
-    $.each(items, function(i, item) {
-        obj = "<li class='ui-li ui-li-static ui-body-c ui-li-has-count'>"
-              +item["count"]+" x "+item["name"][lang()]+" "+item["brand"]+" "
-              +item["typ"];
-        
-        if (item["size"]=="") {}
-        else                  {obj = obj + " (" + item["size"] + ")"};
-
-        obj = obj + "<span class='ui-li-count ui-btn-up-c ui-btn-corner-all'>"
-                    +item["weight"]+"g</span>";
-                              
-        $('#items_ul').append(obj);
-        });
-   
+    items2html()
 
    
    var empty_country = $('#countries li');

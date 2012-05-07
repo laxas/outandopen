@@ -106,29 +106,50 @@ function get_lang(key){
     return lget("trans")[key][lang()];
     };
 
+
+function translate(){
+    $('h1[lang]').each(function(i){
+        var element = $(this);
+        var to_trans = element.attr("lang")
+        if (to_trans in lget("trans")) {
+            element.text(get_lang(to_trans));
+        };
+    });
+
+    $('a[lang]').each(function(i){
+        var element = $(this);
+        var to_trans = element.attr("lang")
+        if (to_trans in lget("trans")) {
+            element.find(".ui-btn-text").text(get_lang(to_trans));
+        };
+    });
+
+    
+};
+
+
 $(document).ready(function(){
 
     items2html();
+    translate();
 
     //~ $('h1[lang]').text(get_lang($('h1[lang]').attr("lang")));
     
     //~ var snippets = $('[lang]');
     
-    $('h1[lang]').each(function(i)){
-        alert(this.attr("lang"));
-        //~ snippet.text(get_lang(this.attr("lang")));
-        });
 
-    $('a[lang]').each(function(i, snippet){
+    //~ $('a[lang]').each(function(i, snippet){
         //~ alert(snippet.text());
         //~ snippet.text(get_lang(snippet.attr("lang")));
-        });
+        //~ });
     
     
     //~ $('[lang]').text(get_lang($('[lang]').attr("lang")));
 
     // Click Events    
-    $("#update_button").click(function() {update_data();items2html()});
+    $("#update_button").click(function() {update_data();
+                                          items2html();
+                                          translate();});
     $(".update").click(function() {items2html();});
     $("#profile").click(function() {load_sliders();});
     

@@ -32,7 +32,7 @@ function force_load (key) {
 //~ var collections = ["tags","peaks","texts","countries","lang","items"];
 
 function update_data () {
-    var collections = ["trans","lang","items"];
+    var collections = ["trans","items"];
     $.each(collections, function (i, collection) {
         force_load(collection);
         });
@@ -41,7 +41,7 @@ function update_data () {
 
 function lang () {return lget("lang")}; 
 
-var collections = ["trans","lang","items"];
+var collections = ["trans","items"];
 $.each(collections, function (i, collection) {
     load(collection);    
     });

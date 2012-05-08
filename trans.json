@@ -2,8 +2,10 @@
     "mountains": {"en":"Mountains", "de":"Berge"},
     "peaks": {"en":"Peaks", "de":"Gipfel"},
     "invitaion": {"en":"Invitation", "de":"Einladung"},
-    "items": {"en":"Item", "de":"Ausrüstung"},
+    "items": {"en":"Items", "de":"Ausrüstung"},
+    "profile": {"en":"Profile", "de":"Benutzerprofil"},
     "update": {"en":"update", "de":"neu laden"},
+    "language": {"de":"English", "en":"Deutsch"},
     "infos_outandopen": {"en":"Infos about OutandOpen", "de":"Informationen über OutandOpen"}
 }
     

@@ -46,7 +46,7 @@ $.each(collections, function (i, collection) {
     load(collection);    
     });
 
-lset("lang","de"); 
+lset("lang","en"); 
 
 
 
@@ -152,6 +152,20 @@ $(document).ready(function(){
                                           translate();});
     $(".update").click(function() {items2html();});
     $("#profile").click(function() {load_sliders();});
+    $("#trans_german").click(function() {lset("lang","de");translate();});
+    $("#trans_english").click(function() {lset("lang","en");translate();});
+    $("#language").click(function() {
+        //~ alert(lget("lang"));
+        if (lget("lang")=="en") 
+            {
+                lset("lang","de");
+            }
+        else
+            {
+                lset("lang","en");
+            }
+        translate();
+        });
     
     
     // Change Events
@@ -165,10 +179,8 @@ $(document).ready(function(){
         lset("hights", $("#slider_hights").val());
         });
     
-    
+   
     //~ activate_mailtext();
-
-    //~ force_load("items");
 
    
    var empty_country = $('#countries li');

@@ -84,9 +84,16 @@ function activate_countries(){
 function items2html(){
     var items = lget("items");
     $('#items_ul').empty()
+    var grey=""
     $.each(items, function(i, item) {
+        var lang = lget("lang");
+        //~ alert(lang);
+        if (item["name"][lang]=="") {
+            lang="de"; 
+            grey='class="grey"'}
+        else {grey=""}
         obj = "<li class='ui-li ui-li-static ui-body-c ui-li-has-count'>"
-              +item["count"]+" x "+item["name"][lang()]+" "+item["brand"]+" "
+              +item["count"]+" x <span "+ grey +">"+item["name"][lang]+"</span> "+item["brand"]+" "
               +item["typ"];
         if (item["size"]=="") {}
         else                  {obj = obj + " (" + item["size"] + ")"};
@@ -151,6 +158,7 @@ $(document).ready(function(){
                                           items2html();
                                           translate();});
     $(".update").click(function() {items2html();});
+    $("#load_items").click(function() {items2html();});
     $("#profile").click(function() {load_sliders();});
     $("#trans_german").click(function() {lset("lang","de");translate();});
     $("#trans_english").click(function() {lset("lang","en");translate();});

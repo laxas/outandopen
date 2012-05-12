@@ -163,7 +163,8 @@ function get_weight(){
     $(".items_input").each(function(i){
         var element = $(this);
         //~ alert(i + ":" + element.find(".weight").text());
-        alert(i + ":" + element.html());
+        //~ alert(i + ":" + element.html());
+        $("#item_footer").text("hi");
         
         });
     };

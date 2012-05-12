@@ -116,8 +116,8 @@ function items2html(){
             lang="de"; 
             grey='class="grey"'}
         else {grey=""}
-        obj = "<input type='checkbox' name='c-"+i+"' id='c-"+i+"' class='custom items_input'/>"
-        obj = obj + "<label for='c-"+i+"'>"
+        obj = "<input type='checkbox' weight='"+ item["weight"] +"' name='i"+i+"' id='i"+i+"' class='custom items_input'/>"
+        obj = obj + "<label for='i"+i+"'>"
               +item["count"]+" x <span "+grey+">"+item["name"][lang]+"</span> "+item["brand"]+" "
               +item["typ"];
         if (item["size"]=="") {}
@@ -160,13 +160,19 @@ function translate(){
 
 function get_weight(){
     //~ alert("hi");
+    var weight = 0
     $(".items_input").each(function(i){
         var element = $(this);
         //~ alert(i + ":" + element.find(".weight").text());
-        //~ alert(i + ":" + element.html());
-        $("#item_footer").text("hi");
-        
+        //~ alert(i + ":" + element.attr("checked"));
+        //~ alert(element.val() + " " + element.attr("id") + element.attr("weight"));
+        //~ alert(parseInt("10"));
+        if (element.attr('checked') == "checked"){
+            weight = weight + parseInt(element.attr("weight"));
+            };
         });
+    //~ alert(weight);
+    $("#item_footer").text(weight + "g");
     };
 
 

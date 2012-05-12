@@ -87,7 +87,6 @@ function items2html_alt(){
     var grey=""
     $.each(items, function(i, item) {
         var lang = lget("lang");
-        //~ alert(lang);
         if (item["name"][lang]=="") {
             lang="de"; 
             grey='class="grey"'}
@@ -109,9 +108,7 @@ function items2html(){
     $('#item_fieldset').empty()
     var grey=""
     $.each(items, function(i, item) {
-        //~ alert(i);
         var lang = lget("lang");
-        //~ alert(lang);
         if (item["name"][lang]=="") {
             lang="de"; 
             grey='class="grey"'}
@@ -159,19 +156,13 @@ function translate(){
 };
 
 function get_weight(){
-    //~ alert("hi");
     var weight = 0
     $(".items_input").each(function(i){
         var element = $(this);
-        //~ alert(i + ":" + element.find(".weight").text());
-        //~ alert(i + ":" + element.attr("checked"));
-        //~ alert(element.val() + " " + element.attr("id") + element.attr("weight"));
-        //~ alert(parseInt("10"));
         if (element.attr('checked') == "checked"){
             weight = weight + parseInt(element.attr("weight"));
             };
         });
-    //~ alert(weight);
     $("#item_footer").text(weight + "g");
     };
 
@@ -192,7 +183,6 @@ $(document).ready(function(){
     $("#trans_german").click(function() {lset("lang","de");translate();});
     $("#trans_english").click(function() {lset("lang","en");translate();});
     $("#language").click(function() {
-        //~ alert(lget("lang"));
         if (lget("lang")=="en") 
             {
                 lset("lang","de");
@@ -216,21 +206,6 @@ $(document).ready(function(){
         lset("hights", $("#slider_hights").val());
         });
     
-
-    //~ $('h1[lang]').text(get_lang($('h1[lang]').attr("lang")));
-    
-    //~ var snippets = $('[lang]');
-    
-
-    //~ $('a[lang]').each(function(i, snippet){
-        //~ alert(snippet.text());
-        //~ snippet.text(get_lang(snippet.attr("lang")));
-        //~ });
-    
-    
-    //~ $('[lang]').text(get_lang($('[lang]').attr("lang")));
-
-
    
     //~ activate_mailtext();
 

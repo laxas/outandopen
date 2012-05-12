@@ -81,7 +81,7 @@ function activate_countries(){
 };
 
 
-function items2html(){
+function items2html_alt(){
     var items = lget("items");
     $('#items_ul').empty()
     var grey=""
@@ -100,6 +100,30 @@ function items2html(){
         obj = obj + "<span class='ui-li-count ui-btn-up-c ui-btn-corner-all'>"
                     +item["weight"]+"g</span>";
         $('#items_ul').append(obj);
+        });
+};
+
+
+function items2html(){
+    var items = lget("items");
+    $('#item_fieldset').empty()
+    var grey=""
+    $.each(items, function(i, item) {
+        //~ alert(i);
+        var lang = lget("lang");
+        //~ alert(lang);
+        if (item["name"][lang]=="") {
+            lang="de"; 
+            grey='class="grey"'}
+        else {grey=""}
+        obj = "<input type='checkbox' name='c-"+i+"' id='c-"+i+"' class='custom items_input'/>"
+        obj = obj + "<label for='c-"+i+"'>"
+              +item["count"]+" x <span "+grey+">"+item["name"][lang]+"</span> "+item["brand"]+" "
+              +item["typ"];
+        if (item["size"]=="") {}
+        else                  {obj = obj + " (" + item["size"] + ")"};
+        obj = obj + " <span class='weight'>(" + item["weight"] + "g)<span></label>";
+        $('#item_fieldset').append(obj);
         });
 };
 
@@ -134,30 +158,28 @@ function translate(){
     
 };
 
+function get_weight(){
+    //~ alert("hi");
+    $(".items_input").each(function(i){
+        var element = $(this);
+        //~ alert(i + ":" + element.find(".weight").text());
+        alert(i + ":" + element.html());
+        
+        });
+    };
+
 
 $(document).ready(function(){
 
     items2html();
     translate();
 
-    //~ $('h1[lang]').text(get_lang($('h1[lang]').attr("lang")));
-    
-    //~ var snippets = $('[lang]');
-    
-
-    //~ $('a[lang]').each(function(i, snippet){
-        //~ alert(snippet.text());
-        //~ snippet.text(get_lang(snippet.attr("lang")));
-        //~ });
-    
-    
-    //~ $('[lang]').text(get_lang($('[lang]').attr("lang")));
-
     // Click Events    
     $("#update_button").click(function() {update_data();
                                           items2html();
                                           translate();});
     $(".update").click(function() {items2html();});
+    $(".items_input").click(function() {get_weight();});
     $("#load_items").click(function() {items2html();});
     $("#profile").click(function() {load_sliders();});
     $("#trans_german").click(function() {lset("lang","de");translate();});
@@ -187,6 +209,21 @@ $(document).ready(function(){
         lset("hights", $("#slider_hights").val());
         });
     
+
+    //~ $('h1[lang]').text(get_lang($('h1[lang]').attr("lang")));
+    
+    //~ var snippets = $('[lang]');
+    
+
+    //~ $('a[lang]').each(function(i, snippet){
+        //~ alert(snippet.text());
+        //~ snippet.text(get_lang(snippet.attr("lang")));
+        //~ });
+    
+    
+    //~ $('[lang]').text(get_lang($('[lang]').attr("lang")));
+
+
    
     //~ activate_mailtext();
 

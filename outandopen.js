@@ -167,6 +167,25 @@ function get_weight(){
     };
 
 
+remoteStorage.getStorageInfo('laxas@5apps.com', function(err, storageInfo) {
+  var token = remoteStorage.receiveToken();
+  if(token) {
+    //we can access the 'notes' category on the remoteStorage of user@example.com:
+    var client = remoteStorage.createClient(storageInfo, 'outandopen', token);
+    var key = "items";
+    client.put(key, localStorage.getItem(key), function(err) {
+ 
+ 
+      //~ client.get('key', function(err, data) {
+        //~ alert("hi");
+      //~ });
+    });
+  } else {
+    //get an access token for 'notes' by dancing OAuth with the remoteStorage of user@example.com:
+    window.location = remoteStorage.createOAuthAddress(storageInfo, ['outandopen'], window.location.href);
+  }
+});
+
 $(document).ready(function(){
 
     items2html();

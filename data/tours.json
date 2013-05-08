@@ -1,6 +1,7 @@
 {'tours': [
     {'name': 'Hohe Kisten', 'tags': ['easy', 'done', ]},
     {'name': 'Krottenkopf', 'tags': ['easy', ]},
+    {'name': 'Bischf', 'tags': ['easy', ]},
     {'name': 'Geigelstein', 'tags': ['easy', 'done_2013']},
     {'name': 'Geierstein', 'tags': ['easy', 'done_2011', ]},
     {'name': 'Klammspitze', 'tags': ['easy', 'done_2011', ]},

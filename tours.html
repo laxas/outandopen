@@ -1,0 +1,24 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Tours</title>
+</head>
+<body>
+    
+    <input type="text" value="hI" class="test">
+    
+    <script src="jquery.min.js"></script>
+    <script>
+        $("input").val("test");
+        $.getJSON("data/tours.json", function(data){
+            var tours = data.tours;
+            var items = [];
+            $.each(tours, function(key, val) {
+                items.push('<li id="' + key + '">' + val.name + '</li>');
+            });
+             $('<ul/>', {
+                'class': 'my-new-list',
+                html: items.join('')
+                }).appendTo('body');
+        })
+    </script>
+</body>

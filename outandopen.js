@@ -46,7 +46,16 @@ $.each(collections, function (i, collection) {
     load(collection);    
     });
 
+<<<<<<< HEAD
 lset("lang","en"); 
+=======
+load("tags");
+load("mountains");
+load("texts");
+load("countries");
+load("lang");
+//~ lset("lang","de"); 
+>>>>>>> master
 
 
 
@@ -56,13 +65,17 @@ function activate_mailtext(){
     if (empty_mailtext.length == 1) {
         empty_mailtext.attr("id", "mailtext")
         $("#mailtexts").empty()
+<<<<<<< HEAD
         
         for (var i=0; i < texts.length; i++){
             text = texts[i];
+=======
+        $.each(texts, function (index, text) {
+>>>>>>> master
             var new_mailtext = empty_mailtext.clone();
             new_mailtext.text(text);
             $('#mailtexts').append(new_mailtext);
-        };
+        });
     };
 };
 
@@ -188,6 +201,7 @@ remoteStorage.getStorageInfo('laxas@5apps.com', function(err, storageInfo) {
 
 $(document).ready(function(){
 
+<<<<<<< HEAD
     items2html();
     translate();
 
@@ -228,28 +242,19 @@ $(document).ready(function(){
    
     //~ activate_mailtext();
 
+=======
+    activate_mailtext();
+>>>>>>> master
    
-   var empty_country = $('#countries li');
+    var empty_country = $('#countries li');
     $('#countries').empty();
    
-   //~ for each (var country in lget("countries")) {
-   for (var i = 0; i < lget("countries").length; i++) {
-        var country = lget("countries")[i];
+    $.each(lget("countries"), function(index, country) {
         var country_name = country["name"][lang()];
         new_country = empty_country.clone();
         new_country.find("#country_name").text(country_name);
         new_country.find("#country_icon").attr("src", "icons/gif/"+country["code"]+".gif");
         var count = 0;
-        
-        //~ for each (var mountain in lget("mountains")) {
-
-
-        //~ for (var j=0; j < lget("mountains").length; j++) {
-            //~ var mountain = lget("mountains")[j];
-            //~ if (mountain[1]["country"] == country["code"]) {
-                //~ count = count + 1;
-            //~ };
-        //~ };
         
         $.each(lget("mountains"), function (index, mountain) {
             if (mountain[1]["country"] == country["code"]) {
@@ -258,9 +263,10 @@ $(document).ready(function(){
         });
 
 
+
         new_country.find("#n_countries").text(count);
         $('#countries').append(new_country);
-   }
+   });
    
    
    $("#mailtexts a").click(function(event){

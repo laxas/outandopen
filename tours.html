@@ -4,16 +4,21 @@
 </head>
 <body>
     
-    <input type="text" value="hI" class="test">
+    <h1>Tours</h1>    
     
     <script src="jquery.min.js"></script>
     <script>
-        $("input").val("test");
         $.getJSON("data/tours.json", function(data){
             var tours = data.tours;
             var items = [];
             $.each(tours, function(key, val) {
-                items.push('<li id="' + key + '">' + val.name + '</li>');
+                var urls = val.urls
+                var links = [];
+                $.each(urls, function(key, val) {
+                    links.push('<a href"' + val + '">' + key + '</a>');
+                    
+                });
+                items.push('<li id="' + key + '">' + val.name + ' - ' + links.join(' - ') + '</li>');
             });
              $('<ul/>', {
                 'class': 'my-new-list',

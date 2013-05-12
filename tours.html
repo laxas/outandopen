@@ -1,6 +1,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Tours</title>
+    <style>
+	span {border: dashed 2px;
+              padding: 1px;
+              padding-left: 7px;
+              padding-right: 7px;
+              margin: 1px;
+              border-radius: 4px;
+    	      border-color: blue;}
+       li {padding: 6px;
+           background-color: beige;
+           margin: 2px;
+           width: 600px;
+           border-radius: 3px;
+           list-style-type: none;	   
+          }
+     </style>
 </head>
 <body>
     
@@ -12,13 +28,26 @@
             var tours = data.tours;
             var items = [];
             $.each(tours, function(key, val) {
-                var urls = val.urls
                 var links = [];
-                $.each(urls, function(key, val) {
-                    links.push('<a href"' + val + '">' + key + '</a>');
-                    
-                });
-                items.push('<li id="' + key + '">' + val.name + ' - ' + links.join(' - ') + '</li>');
+                if (val.hasOwnProperty('urls')) {
+                    links.push(" ");
+                    var urls = val.urls;
+                    $.each(urls, function(key, val) {
+                        links.push('<a href="' + val + '" target="_blank">' + parseInt(key) + '</a>');
+                        
+                    });
+                };
+
+                var tags = [];
+                if (val.hasOwnProperty('tags')) {
+                    tags.push(" ");
+                    $.each(val.tags, function(key, val) {
+                        tags.push('<span>' + val + '</span>');
+                    });
+                };
+
+
+                items.push('<li id="' + key + '">' + val.name + ' ' + links.join(', ') + ' - ' + tags.join('') + '</li>');
             });
              $('<ul/>', {
                 'class': 'my-new-list',

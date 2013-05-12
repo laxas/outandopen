@@ -2,31 +2,41 @@
     <meta charset="UTF-8">
     <title>Tours</title>
     <style>
-	span {border: dashed 2px;
+	span {border: solid 2px grey;
               padding: 1px;
               padding-left: 7px;
               padding-right: 7px;
               margin: 1px;
               border-radius: 4px;
-    	      border-color: blue;}
+    	      border-color: grey;}
        li {padding: 6px;
            background-color: beige;
            margin: 2px;
            width: 600px;
            border-radius: 3px;
-           list-style-type: none;	   
+           list-style-type: katakana-iroha;	   
           }
      </style>
 </head>
 <body>
     
-    <h1>Tours</h1>    
+    <h1>Ziele 2013</h1>    
+    <div id='todo_2013'>
+        
+    </div>
+
+    <h1>2013 gemeistert</h1>     
+    <div id='done_2013'>
     
+    </div>
+
+	
     <script src="jquery.min.js"></script>
     <script>
         $.getJSON("data/tours.json", function(data){
             var tours = data.tours;
-            var items = [];
+            var done = [];
+            var todo = [];
             $.each(tours, function(key, val) {
                 var links = [];
                 if (val.hasOwnProperty('urls')) {
@@ -45,14 +55,27 @@
                         tags.push('<span>' + val + '</span>');
                     });
                 };
-
-
-                items.push('<li id="' + key + '">' + val.name + ' ' + links.join(', ') + ' - ' + tags.join('') + '</li>');
+                var hight = ''
+                if (val.hasOwnProperty('hight')) {
+                    hight = '('+ val.hight +'m)';
+                };
+                element = '<li id="' + key + '">' + val.name + hight + ' ' + links.join(', ') + ' - ' + tags.join('') + '</li>';
+                if (jQuery.inArray("done_2013", val.tags) == -1) {
+                    todo.push(element);
+		}
+                else {
+                     done.push(element);
+                };
             });
              $('<ul/>', {
                 'class': 'my-new-list',
-                html: items.join('')
-                }).appendTo('body');
+                html: todo.join('')
+                }).appendTo('#todo_2013');
+             $('<ul/>', {
+                'class': 'my-new-list',
+                html: done.join('')
+                }).appendTo('#done_2013');
+
         })
     </script>
 </body>

@@ -60,7 +60,7 @@
                     hight = '('+ val.hight +'m)';
                 };
                 element = '<li id="' + key + '">' + val.name + hight + ' ' + links.join(', ') + ' - ' + tags.join('') + '</li>';
-                if (jQuery.inArray("done_2013", val.tags) == -1) {
+                if ($.inArray("done_2013", val.tags) == -1) {
                     todo.push(element);
 		}
                 else {

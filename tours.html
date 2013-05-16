@@ -38,6 +38,7 @@
             var done = [];
             var todo = [];
             $.each(tours, function(key, val) {
+                var urls = val.urls
                 var links = [];
                 if (val.hasOwnProperty('urls')) {
                     links.push(" ");

@@ -14,7 +14,7 @@
            margin: 2px;
            width: 600px;
            border-radius: 3px;
-           list-style-type: katakana-iroha;	   
+           list-style-type: none;	   
           }
      </style>
 </head>
@@ -43,7 +43,7 @@
                     links.push(" ");
                     var urls = val.urls;
                     $.each(urls, function(key, val) {
-                        links.push('<a href="' + val + '" target="_blank">' + parseInt(key) + '</a>');
+                        links.push('<a href="' + val + '" target="_blank">'+' <img src="icons/png/globe_20.png" alt="'+parseInt(key)+'"></a>');
                         
                     });
                 };
@@ -59,7 +59,7 @@
                 if (val.hasOwnProperty('hight')) {
                     hight = '('+ val.hight +'m)';
                 };
-                element = '<li id="' + key + '">' + val.name + hight + ' ' + links.join(', ') + ' - ' + tags.join('') + '</li>';
+                element = '<li id="' + key + '">' + val.name + ' ' + hight + ' ' + links.join(' ') + '</li>';
                 if ($.inArray("done_2013", val.tags) == -1) {
                     todo.push(element);
 		}

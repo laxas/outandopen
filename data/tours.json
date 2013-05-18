@@ -1,5 +1,5 @@
 {"tours": [
-    {"name": "Risserkogel", "hight": 1826, "urls": ["http://www.hoehenrausch.de/berge/risserkogel/"], "tags": ["easy", "done" ]},
+    {"name": "Risserkogel", "hight": 1826, "urls": ["http://www.hoehenrausch.de/berge/risserkogel/"], "tags": ["easy", "done_2013" ]},
     {"name": "Naunspitze", "hight": 1633, "urls": ["http://www.hoehenrausch.de/berge/naunspitze/index.php"], "tags": ["easy", "done" ]},
     {"name": "Petersköpfl", "hight": 1745, "urls": ["http://de.wikipedia.org/wiki/Petersk%C3%B6pfl"], "tags": ["easy", "done_2012" ]},
     {"name": "Hohe Kisten", "hight": 1922, "urls": ["http://de.wikipedia.org/wiki/Hohe_Kisten", "http://www.hikr.org/tour/post17914.html"], "tags": ["easy"]},
@@ -10,7 +10,7 @@
     {"name": "Klammspitze", "hight": 1924, "urls": ["http://www.hoehenrausch.de/berge/klammspitze/"], "tags": ["easy", "done_2011"]},
     {"name": "Kreuzspitze", "hight": 2185, "urls": ["http://www.hoehenrausch.de/berge/kreuzspitze/"],"tags": ["easy", "done_2011"]},
     {"name": "Hochmiesing", "hight": 1883, "urls": ["http://www.hoehenrausch.de/berge/hochmiesing/index.php"],"tags": ["easy"]},
-    {"name": "Geierstein", "urls": ["http://www.hoehenrausch.de/berge/geierstein/index.php"], "tags": ["easy", "done_2011"]},
+    {"name": "Geierstein", "hight":1491, "urls": ["http://www.hoehenrausch.de/berge/geierstein/index.php"], "tags": ["easy", "done_2011"]},
     {"name": "Fockenstein", "urls": ["http://www.hoehenrausch.de/berge/fockenstein/"],"tags": ["easy", "done_2011"]},
     {"name": "Bärenkopf", "urls": ["http://www.hoehenrausch.de/berge/baerenkopf/index.php"],"tags": ["easy", "done_2011"]},
     {"name": "Rotwand von Bayerischzell", "tags": ["easy"]},

@@ -6,6 +6,8 @@
     {"name": "Krottenkopf", "hight": 2086, "urls": ["http://www.hoehenrausch.de/berge/krottenkopf/"],"tags": ["easy"]},
     {"name": "Bischof", "hight": 2035, "urls": ["http://bergtoursuche.de/de/bergtour_2234_Hoher_Fricken__und_Bischof.html"], "tags": ["easy"]},
     {"name": "Hoher Fricken", "hight": 1940, "urls": ["http://de.wikipedia.org/wiki/Hoher_Fricken"], "tags": ["easy"]},
+    {"name": "Hochgern", "urls": ["http://www.hoehenrausch.de/berge/hochgern/index.php"], "tags": ["easy", "done"]},
+    {"name": "Wasserwand", "urls": ["http://www.hoehenrausch.de/berge/wasserwand_kitzstein/index.php"], "tags": ["easy", "done_2011"]},
     {"name": "Geigelstein", "urls": ["http://www.hoehenrausch.de/berge/geigelstein/index.php"], "tags": ["easy", "done_2013"]},
     {"name": "Klammspitze", "hight": 1924, "urls": ["http://www.hoehenrausch.de/berge/klammspitze/"], "tags": ["easy", "done_2011"]},
     {"name": "Kreuzspitze", "hight": 2185, "urls": ["http://www.hoehenrausch.de/berge/kreuzspitze/"],"tags": ["easy", "done_2011"]},

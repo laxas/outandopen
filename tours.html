@@ -44,7 +44,9 @@
                     links.push(" ");
                     var urls = val.urls;
                     $.each(urls, function(key, val) {
-                        links.push('<a href="' + val + '" target="_blank">'+' <img src="icons/png/globe_20.png" alt="'+parseInt(key)+'"></a>');
+                        if (val.match("wikipedia")) {var icon = "wiki.png";}
+                        else {var icon = "globe.png"}
+                        links.push('<a href="' + val + '" target="_blank">'+' <img src="icons/png/'+icon+'"  width="20" alt="' + parseInt(key)+'"></a>');
                         
                     });
                 };

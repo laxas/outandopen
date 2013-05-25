@@ -1,0 +1,94 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Tours</title>
+    <style>
+	span {border: solid 2px grey;
+              padding: 1px;
+              padding-left: 7px;
+              padding-right: 7px;
+              margin: 1px;
+              border-radius: 4px;
+    	      border-color: grey;}
+       li {padding: 6px;
+           background-color: beige;
+           margin: 2px;
+           width: 600px;
+           border-radius: 3px;
+<<<<<<< HEAD
+           list-style-type: none;	   
+=======
+           list-style-type: katakana-iroha;	   
+>>>>>>> f26bc7ddfe6d1002c84b531a9f8bbe55d4dd81e3
+          }
+     </style>
+</head>
+<body>
+    
+    <h1>Ziele 2013</h1>    
+    <div id='todo_2013'>
+        
+    </div>
+
+    <h1>2013 gemeistert</h1>     
+    <div id='done_2013'>
+    
+    </div>
+
+	
+    <script src="jquery.min.js"></script>
+    <script>
+        $.getJSON("data/tours.json", function(data){
+            var tours = data.tours;
+            var done = [];
+            var todo = [];
+            $.each(tours, function(key, val) {
+                var links = [];
+                if (val.hasOwnProperty('urls')) {
+                    links.push(" ");
+                    var urls = val.urls;
+                    $.each(urls, function(key, val) {
+<<<<<<< HEAD
+                        links.push('<a href="' + val + '" target="_blank">'+' <img src="icons/png/globe_20.png" alt="'+parseInt(key)+'"></a>');
+=======
+                        links.push('<a href="' + val + '" target="_blank">' + parseInt(key) + '</a>');
+>>>>>>> f26bc7ddfe6d1002c84b531a9f8bbe55d4dd81e3
+                        
+                    });
+                };
+
+                var tags = [];
+                if (val.hasOwnProperty('tags')) {
+                    tags.push(" ");
+                    $.each(val.tags, function(key, val) {
+                        tags.push('<span>' + val + '</span>');
+                    });
+                };
+                var hight = ''
+                if (val.hasOwnProperty('hight')) {
+                    hight = '('+ val.hight +'m)';
+                };
+<<<<<<< HEAD
+                element = '<li id="' + key + '">' + val.name + ' ' + hight + ' ' + links.join(' ') + '</li>';
+                if ($.inArray("done_2013", val.tags) == -1) {
+=======
+                element = '<li id="' + key + '">' + val.name + hight + ' ' + links.join(', ') + ' - ' + tags.join('') + '</li>';
+                if (jQuery.inArray("done_2013", val.tags) == -1) {
+>>>>>>> f26bc7ddfe6d1002c84b531a9f8bbe55d4dd81e3
+                    todo.push(element);
+		}
+                else {
+                     done.push(element);
+                };
+            });
+             $('<ul/>', {
+                'class': 'my-new-list',
+                html: todo.join('')
+                }).appendTo('#todo_2013');
+             $('<ul/>', {
+                'class': 'my-new-list',
+                html: done.join('')
+                }).appendTo('#done_2013');
+
+        })
+    </script>
+</body>

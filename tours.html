@@ -16,6 +16,9 @@
            border-radius: 3px;
            list-style-type: decimal;	   
           }
+        img {position: relative;
+             top: 3px;
+             left: 10px;}
      </style>
 </head>
 <body>
@@ -45,6 +48,7 @@
                     var urls = val.urls;
                     $.each(urls, function(key, val) {
                         if (val.match("wikipedia")) {var icon = "wiki.png";}
+                        else if (val.match("hoehenrausch")) {var icon = "h.png";}
                         else {var icon = "globe.png"}
                         links.push('<a href="' + val + '" target="_blank">'+' <img src="icons/png/'+icon+'"  width="20" alt="' + parseInt(key)+'"></a>');
                         

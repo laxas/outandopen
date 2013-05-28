@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="Neues Dokument 1">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="269.38698"
+     inkscape:cy="640.27695"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1680"
+     inkscape:window-height="1026"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g3767"
+       inkscape:export-filename="/home/alex/js/outandopen/icons/png/h.png"
+       inkscape:export-xdpi="70"
+       inkscape:export-ydpi="70">
+      <rect
+         inkscape:export-ydpi="70"
+         inkscape:export-xdpi="70"
+         inkscape:export-filename="/home/alex/js/outandopen/icons/png/h.png"
+         ry="15.002264"
+         y="33.108261"
+         x="47.47221"
+         height="99.009903"
+         width="99.009903"
+         id="rect2993"
+         style="opacity:0.51818160000000002;fill:#24221c;fill-opacity:0;stroke:#00005d;stroke-width:8;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text2995"
+         y="113.93047"
+         x="66.369713"
+         style="font-size:90.98413848999999232px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:#0012d4;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="113.93047"
+           x="66.369713"
+           id="tspan2997"
+           sodipodi:role="line">H</tspan></text>
+    </g>
+  </g>
+</svg>

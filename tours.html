@@ -17,7 +17,7 @@
            list-style-type: decimal;	   
           }
         img {position: relative;
-             top: 3px;
+             top: 1px;
              left: 10px;
              width: 30px;}
      </style>
@@ -55,6 +55,11 @@
                         
                     });
                 };
+                
+                
+                if (val.hasOwnProperty('place')) {
+                    var weather = '<a href="http://www.wetteronline.de/wetter/' + val.place + '" target="_blank"><img src="icons/png/04.png"></a>';
+                };
 
                 var tags = [];
                 if (val.hasOwnProperty('tags')) {
@@ -67,7 +72,7 @@
                 if (val.hasOwnProperty('hight')) {
                     hight = '('+ val.hight +'m)';
                 };
-                element = '<li id="' + key + '">' + val.name + ' ' + hight + ' ' + links.join(' ') + '</li>';
+                element = '<li id="' + key + '">' + val.name + ' ' + hight + ' ' + weather + links.join(' ') + '</li>';
                 if ($.inArray("done_2013", val.tags) == -1) {
                     todo.push(element);
 		}

@@ -18,7 +18,7 @@
     {"name": "Rotwand von Bayerischzell", "place": "Bayerischzell", "tags": ["easy"]},
     {"name": "Seven Summits: Rampoldplatte, Lechnerkopf, Hochsalwand, Wendelstein, Schweinsberg, Breitenstein und Bockstein", "place": "Bayerischzell", "tags": ["todo"]},
     {"name": "Seekarkreuz", "place": "Lenggries", "hight":1601, "urls": ["http://www.hoehenrausch.de/berge/seekarkreuz/index.php"], "tags": ["easy", "done_2013"]},
-    {"name": "Ochsenkamp", "place": "Lenggries", "hight":1594, "urls": ["http://www.hoehenrausch.de/berge/kampen/"], "tags": ["easy", "done_2012"]},
+    {"name": "Ochsenkamp, Auerkamp und Spitzkamp", "place": "Lenggries", "hight":1594, "urls": ["http://pagewizz.com/lenggries-ochsenkamp-seekarkreuz-schoenberg-roehrlmoos-alm-lange-wanderung/", "http://www.hoehenrausch.de/berge/kampen/", "http://www.tourentipp.de/de/touren/Spitzkamp-Bergtour-Lenggries_802.html"], "tags": ["easy", "done_2012"]},
     {"name": "Brecherspitz", "place": "Schliersee", "hight":1683, "urls": ["http://www.hoehenrausch.de/berge/brecherspitz/index.php"], "tags": ["easy", "tryed_2013"]},
     {"name": "Benediktenwand", "hight":1801 , "urls": ["http://www.hoehenrausch.de/berge/benediktenwand/"], "tags": ["easy", "tryed_2013"]},
     {"name": "Bodenschneid", "place": "Schliersee", "hight":1669, "urls": ["http://www.hoehenrausch.de/berge/bodenschneid/"], "tags": ["easy", "done_2013"]},
@@ -48,12 +48,12 @@
     {"name": "Kramer", "hight":1985, "urls": ["http://www.hoehenrausch.de/berge/kramerspitz/"], "tags": ["done"]},
     {"name": "Hoher Ziegspitz", "urls": ["http://www.hoehenrausch.de/berge/hoher_ziegspitz/index.php    "], "tags": ["done"]},
     {"name": "Ettaler Mandl", "urls": ["http://www.hoehenrausch.de/berge/ettaler_manndl/index.php"], "tags": ["done"]},
-    {"name": "Zugspitze", "hight":2962, "urls": ["http://de.wikipedia.org/wiki/Zugspitze"], "tags": ["long"]},
+    {"name": "Zugspitze", "hight":2962, "urls": ["http://de.wikipedia.org/wiki/Zugspitze", "http://pagewizz.com/ehrwald-seebensee-drachenkopf-wandern/"], "tags": ["long"]},
     {"name": "Hohe Munde", "hight":2662, "urls": ["http://de.wikipedia.org/wiki/Hohe_Munde"], "tags": ["long"]},
     {"name": "Elmauer Halt", "place": "Kufstein", "urls": ["http://www.hoehenrausch.de/berge/ellmauer_halt/"], "tags": ["todo"]},
     {"name": "Goinger Halt", "place": "Kufstein", "urls": ["http://www.hoehenrausch.de/berge/hintere_goinger_halt/index.php"], "tags": ["todo"]},
     {"name": "Treffauer", "place": "Kufstein", "urls": ["http://de.wikipedia.org/wiki/Treffauer"], "tags": ["todo"]},
-    {"name": "Pyramidenspitze", "place": "Kufstein", "hight":1998, "urls": ["http://de.wikipedia.org/wiki/Pyramidenspitze"], "tags": ["todo"]},
+    {"name": "Pyramidenspitze", "place": "Kufstein", "hight":1998, "urls": ["http://de.wikipedia.org/wiki/Pyramidenspitze", "http://pagewizz.com/pyramidenspitze-zahmer-kaiser-wandern-von-durchholzen-zur-vorderkaiserfeldenhuette/"], "tags": ["todo"]},
     {"name": "Daniel", "hight":2340, "urls": ["http://de.wikipedia.org/wiki/Daniel_%28Berg%29"], "tags": ["todo"]},
     {"name": "Upsspitze", "urls": ["http://de.wikipedia.org/wiki/Daniel_%28Berg%29"], "tags": ["todo"]},
     {"name": "Hochschrutte", "urls": ["http://de.wikipedia.org/wiki/Daniel_%28Berg%29"], "tags": ["todo"]},
@@ -63,5 +63,6 @@
     {"name": "Ehrwalder Sonnenspitze", "urls": ["http://de.wikipedia.org/wiki/Ehrwalder_Sonnenspitze"], "tags": ["todo", "difficult"]},
     {"name": "Hindelanger Klettersteig", "urls": ["http://de.wikipedia.org/wiki/Hindelanger_Klettersteig"], "tags": ["todo", "via ferrata"]},
     {"name": "Mindelheimer Klettersteig", "urls": ["http://de.wikipedia.org/wiki/Mindelheimer_Klettersteig"], "tags": ["todo", "via ferrata"]},
-    {"name": "Triglav", "urls": ["http://de.wikipedia.org/wiki/Triglav"], "tags": ["todo", "long"]}
+    {"name": "Triglav", "urls": ["http://de.wikipedia.org/wiki/Triglav"], "tags": ["todo", "long"]},
+    {"name": "Schlern - Petz", "hight":2563, "urls": ["http://www.tourentipp.de/de/touren/Schlern-Bergtour-Dolomiten-Suedtirol-Seiser-Alm_1586.html"], "tags": ["todo", "long"]}
 ]}

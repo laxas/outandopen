@@ -43,7 +43,7 @@
     {"name": "Schinder", "hight":1808, "urls": ["http://de.wikipedia.org/wiki/Schinder_%28Berg%29", "http://www.hoehenrausch.de/berge/schinder/"], "tags": ["done", "done_2011"]},
     {"name": "Halserspitze über den Blauberggrad", "place": "kreuth", "urls": ["http://www.hoehenrausch.de/berge/halserspitz/index.php"], "tags": ["done"]},
     {"name": "vom Heimgarten zum Herzogstand", "urls": ["http://www.hoehenrausch.de/berge/heimgarten_herzogstand/"], "tags": ["done_2012"]},
-    {"name": "Mondscheinspitze", "hight":2106, "urls": ["http://www.hoehenrausch.de/berge/mondscheinspitze/index.php"], "tags": ["done"]},
+    {"name": "Mondscheinspitze", "hight":2106, "urls": ["http://www.alpenvereinaktiv.com/de/tour/montscheinspitze-eine-stramme-karwendeltour/6601272/", "http://www.hoehenrausch.de/berge/mondscheinspitze/index.php"], "tags": ["done"]},
     {"name": "Ammergauer Hochplatte", "urls": ["http://www.hoehenrausch.de/berge/hochplatte_ammergauer/index.php"], "tags": ["done_2012"]},
     {"name": "Notkarspitze", "hight":1889, "urls": ["http://www.hoehenrausch.de/berge/notkarspitze/index.php"], "tags": ["done"]},
     {"name": "Kramer", "hight":1985, "urls": ["http://www.hoehenrausch.de/berge/kramerspitz/"], "tags": ["done"]},

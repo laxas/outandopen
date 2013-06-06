@@ -50,6 +50,7 @@
                     $.each(urls, function(key, val) {
                         if (val.match("wikipedia")) {var icon = "wiki.png";}
                         else if (val.match("hoehenrausch")) {var icon = "h_logo.png";}
+                        else if (val.match("alpenvereinaktiv")) {var icon = "av.png";}
                         else {var icon = "globe.png"}
                         links.push('<a href="' + val + '" target="_blank">'+' <img src="icons/png/'+icon+'"  alt="' + parseInt(key)+'"></a>');
                         

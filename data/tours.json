@@ -1,7 +1,7 @@
 {"tours": [
     {"name": "Risserkogel", "hight": 1826, "place": "kreuth", "urls": ["http://www.hoehenrausch.de/berge/risserkogel/"], "tags": ["easy", "done_2013" ]},
-    {"name": "Naunspitze", "place": "Kufstein", "hight": 1633, "urls": ["http://www.hoehenrausch.de/berge/naunspitze/index.php"], "tags": ["easy", "done" ]},
-    {"name": "Petersköpfl", "place": "Kufstein", "hight": 1745, "urls": ["http://de.wikipedia.org/wiki/Petersk%C3%B6pfl"], "tags": ["easy", "done_2012" ]},
+    {"name": "Naunspitze", "place": "Kufstein", "hight": 1633, "urls": ["http://www.hoehenrausch.de/berge/naunspitze/index.php"], "tags": ["easy", "done_2012", "done_2013" ]},
+    {"name": "Petersköpfl", "place": "Kufstein", "hight": 1745, "urls": ["http://de.wikipedia.org/wiki/Petersk%C3%B6pfl"], "tags": ["easy", "done_2012", "done_2013" ]},
     {"name": "Rabenkopf", "place": "Jachenau", "hight":1559, "urls": ["http://www.hoehenrausch.de/berge/rabenkopf/"], "tags": ["easy", "done_2011", "bike and hike"]},
     {"name": "Ross- und Buchstein", "place": "Kreuth", "hight":1701, "urls": ["http://www.hoehenrausch.de/berge/rossstein_buchstein/"], "tags": ["done_2010", "bike and hike"]},
     {"name": "Hochgern", "place": "Chiemgau", "hight": 1748, "urls": ["http://www.hoehenrausch.de/berge/hochgern/index.php"], "tags": ["easy", "done"]},
@@ -16,7 +16,7 @@
     {"name": "Hoher Fricken", "place": "Eschenlohe", "hight": 1940, "urls": ["http://de.wikipedia.org/wiki/Hoher_Fricken"], "tags": ["easy"]},
     {"name": "Geigelstein", "place": "Chiemgau", "urls": ["http://www.hoehenrausch.de/berge/geigelstein/index.php"], "tags": ["easy", "done_2013"]},
     {"name": "Klammspitze", "hight": 1924, "urls": ["http://www.hoehenrausch.de/berge/klammspitze/"], "tags": ["easy", "done_2011"]},
-    {"name": "Kreuzspitze", "hight": 2185, "urls": ["http://www.hoehenrausch.de/berge/kreuzspitze/"],"tags": ["easy", "done_2011"]},
+    {"name": "Kreuzspitze", "hight": 2185, "urls": ["http://www.alpenvereinaktiv.com/de/tour/bike-and-hike-zur-kreuzspitze/5722898/", "http://www.alpenvereinaktiv.com/de/tour/kreuzspitze/3686641/", "http://www.hoehenrausch.de/berge/kreuzspitze/"],"tags": ["easy", "done_2011"]},
     {"name": "Hochmiesing", "hight": 1883, "urls": ["http://www.hoehenrausch.de/berge/hochmiesing/index.php"],"tags": ["easy"]},
     {"name": "Geierstein", "place": "Lenggries", "hight":1491, "urls": ["http://www.hoehenrausch.de/berge/geierstein/index.php"], "tags": ["easy", "done_2011"]},
     {"name": "Fockenstein", "hight":1564, "urls": ["http://www.hoehenrausch.de/berge/fockenstein/"],"tags": ["easy", "done_2011"]},
